@@ -1,0 +1,60 @@
+// --------------------------------
+//					   		 STYLES
+// --------------------------------
+
+body {
+    text-align: center;
+}
+
+h1 {
+    margin: $bump * 3 auto $bump * 2;
+}
+
+section {
+    padding: $bump * 2 $bump;
+    background: #f0f0f0;
+
+    &:nth-of-type(odd) {
+        background: #a7a7a7;
+    }
+
+    &.nav {
+        background: white;
+        display: none;
+    }
+}
+
+.nav {
+    a {
+        padding: $bump/2;
+        color: $text;
+        &:hover {
+            color: red;
+        }
+    }
+}
+
+.listing {
+    li {
+        background: white;
+        padding: $bump/2;
+    }
+}
+
+.carousel-cell {
+    padding: $bump;
+    display: block;
+    width: 100%;
+}
+
+// MODAL TO REUSE
+[data-modal-content] {
+    display: none;
+
+    .modal & {
+        display: inline-block;
+    }
+}
+.modal-visible {
+    overflow-y: hidden;
+}

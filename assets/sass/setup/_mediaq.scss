@@ -1,0 +1,19 @@
+/* --- Media queries --- */
+
+//	USAGE:
+//
+//	@include media(">tabletland", "<=1150px") {
+//		font-size:4.0rem;
+//	}
+// 
+//	@include media("<mobile") {
+//		width:100%;
+//	}
+
+$breakpoints:(
+	vsmall:350px,
+	small:480px, 
+	mobile:768px, 
+	tabletport:800px,
+	tabletland:1025px
+);

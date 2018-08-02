@@ -1,0 +1,24 @@
+// --------------------------------
+//					    MASTER FILE
+// --------------------------------
+
+@import "vendor/normalize";
+@import "vendor/foundation";
+@import "vendor/include-media";
+
+@import "setup/mediaq";
+@import "setup/mixins";
+@import "setup/vars";
+@import "setup/fonts";
+
+@import "helpers/defaults";
+@import "helpers/icon";
+
+@import "modules/baguette";
+@import "modules/choices";
+@import "modules/flickity";
+@import "modules/modal";
+
+@import "region/header";
+@import "custom/style";
+@import "region/footer";

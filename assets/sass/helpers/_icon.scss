@@ -1,0 +1,157 @@
+/*
+ * ----------------------
+ * FHM
+ * Base - Icon
+ * ----------------------
+ */
+
+
+$icons: (
+	basket-dark: (positionX: 30.927835051546392%, positionY: 5.434782608695652%),
+	basket-white: (positionX: 0%, positionY: 32.608695652173914%),
+	burger-menu: (positionX: 24.242424242424242%, positionY: 50.505050505050505%),
+	burger-menu-dark: (positionX: 100%, positionY: 23.232323232323232%),
+	calendar-dark: (positionX: 59.5959595959596%, positionY: 0%),
+	calendar-white: (positionX: 59.5959595959596%, positionY: 27.272727272727273%),
+	chevron-down-dark: (positionX: 26.262626262626263%, positionY: 31.25%),
+	chevron-down-white: (positionX: 0%, positionY: 52.083333333333336%),
+	chevron-next: (positionX: 77.57009345794393%, positionY: 0%),
+	chevron-prev: (positionX: 77.57009345794393%, positionY: 27.272727272727273%),
+	chevron-up-white: (positionX: 100%, positionY: 37.5%),
+	close: (positionX: 24.242424242424242%, positionY: 75%),
+	email: (positionX: 97.05882352941177%, positionY: 77.08333333333333%),
+	image-credit: (positionX: 0%, positionY: 100%),
+	minus: (positionX: 31.914893617021278%, positionY: 0%),
+	play: (positionX: 96.11650485436893%, positionY: 57.77777777777778%),
+	plus: (positionX: 0%, positionY: 0%),
+	rating-star: (positionX: 100%, positionY: 0%),
+	rating-star-half: (positionX: 72.72727272727273%, positionY: 74.15730337078652%),
+	search-dark: (positionX: 48.484848484848484%, positionY: 75%),
+	search-white: (positionX: 0%, positionY: 75%),
+);
+
+@mixin icon-base {
+	display: inline-block;
+	background-image: url(dist/img/icons.svg);
+	background-repeat: no-repeat;
+	background-size: auto 100%;
+}
+
+@mixin icon-size($size: 32) {
+	width: #{$size}px;
+	height: #{$size}px;
+}
+
+@mixin icon($sprite, $size: 32) {
+	@include icon-base();
+    @include icon-sprite($sprite);
+	@include icon-size($size);
+}
+
+@mixin icon-sprite($sprite) {
+	$sprite: map-get($icons, $sprite);
+	background-position: map-get($sprite, positionX) map-get($sprite, positionY);
+    content: '\00a0';
+}
+
+.icon {
+	@include icon-base();
+	@include icon-size();
+}
+
+.icon--medium {
+	@include icon-size(1.5);
+}
+
+.icon--large {
+	@include icon-size(2);
+}
+
+.icon--xlarge {
+	@include icon-size(3);
+}
+
+.icon__basket-dark {
+	background-position: 30.927835051546392% 5.434782608695652%;
+}
+
+.icon__basket-white {
+	background-position: 0% 32.608695652173914%;
+}
+
+.icon__burger-menu {
+	background-position: 24.242424242424242% 50.505050505050505%;
+}
+
+.icon__burger-menu-dark {
+	background-position: 100% 23.232323232323232%;
+}
+
+.icon__calendar-dark {
+	background-position: 59.5959595959596% 0%;
+}
+
+.icon__calendar-white {
+	background-position: 59.5959595959596% 27.272727272727273%;
+}
+
+.icon__chevron-down-dark {
+	background-position: 26.262626262626263% 31.25%;
+}
+
+.icon__chevron-down-white {
+	background-position: 0% 52.083333333333336%;
+}
+
+.icon__chevron-next {
+	background-position: 77.57009345794393% 0%;
+}
+
+.icon__chevron-prev {
+	background-position: 77.57009345794393% 27.272727272727273%;
+}
+
+.icon__chevron-up-white {
+	background-position: 100% 37.5%;
+}
+
+.icon__close {
+	background-position: 24.242424242424242% 75%;
+}
+
+.icon__email {
+	background-position: 97.05882352941177% 77.08333333333333%;
+}
+
+.icon__image-credit {
+	background-position: 0% 100%;
+}
+
+.icon__minus {
+	background-position: 31.914893617021278% 0%;
+}
+
+.icon__play {
+	background-position: 96.11650485436893% 57.77777777777778%;
+}
+
+.icon__plus {
+	background-position: 0% 0%;
+}
+
+.icon__rating-star {
+	background-position: 100% 0%;
+}
+
+.icon__rating-star-half {
+	background-position: 72.72727272727273% 74.15730337078652%;
+}
+
+.icon__search-dark {
+	background-position: 48.484848484848484% 75%;
+}
+
+.icon__search-white {
+	background-position: 0% 75%;
+}
+

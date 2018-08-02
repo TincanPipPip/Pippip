@@ -1,0 +1,61 @@
+/*
+ * ----------------------
+ * FHM
+ * Base - Icon
+ * ----------------------
+ */
+
+
+${{ spriteName }}s: (
+	{{ #shapes }}
+	{{ base }}: (positionX: {{ position.relative.x }}%, positionY: {{ position.relative.y }}%),
+	{{ /shapes }}
+);
+
+@mixin {{ spriteName }}-base {
+	display: inline-block;
+	background-image: url({{{ sprite }}});
+	background-repeat: no-repeat;
+	background-size: auto 100%;
+}
+
+@mixin {{ spriteName }}-size($size: {{ spriteDims }}) {
+	width: #{$size}px;
+	height: #{$size}px;
+}
+
+@mixin {{ spriteName }}($sprite, $size: {{ spriteDims }}) {
+	@include {{ spriteName }}-base();
+    @include {{ spriteName }}-sprite($sprite);
+	@include {{ spriteName }}-size($size);
+}
+
+@mixin {{ spriteName }}-sprite($sprite) {
+	$sprite: map-get(${{ spriteName }}s, $sprite);
+	background-position: map-get($sprite, positionX) map-get($sprite, positionY);
+    content: '\00a0';
+}
+
+.icon {
+	@include {{ spriteName }}-base();
+	@include {{ spriteName }}-size();
+}
+
+.icon--medium {
+	@include {{ spriteName }}-size(1.5);
+}
+
+.icon--large {
+	@include {{ spriteName }}-size(2);
+}
+
+.icon--xlarge {
+	@include {{ spriteName }}-size(3);
+}
+
+{{ #shapes }}
+.icon__{{ base }} {
+	background-position: {{position.relative.x}}% {{position.relative.y}}%;
+}
+
+{{/shapes}}
