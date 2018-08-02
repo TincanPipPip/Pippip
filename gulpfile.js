@@ -67,18 +67,6 @@ gulp.task("sass", function() {
 });
 
 /*
- * Task - CSS
- */
-
-gulp.task("css", function() {
-    gulp.src(paths.css)
-        .pipe(cleanCSS({ compatibility: "ie8" }))
-        .pipe(concat("vendor.css"))
-        .pipe(gulp.dest(paths.dist + "css"))
-        .pipe(reload({ stream: true }));
-});
-
-/*
  * Task - Minify Images
  */
 
