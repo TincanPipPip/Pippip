@@ -12,7 +12,7 @@ let localUrl = "http://lh.vanilla.com:8080",
     imagemin = require("gulp-imagemin"),
     paths = {
         assets: ["./assets"],
-        js: ["./assets/js/**/*.js"],
+        js: ["./assets/js/*.js"],
         css: ["./assets/css/*.css"],
         sass: ["./assets/sass/**/*.scss"],
         imgs: ["./assets/img/**/*"],

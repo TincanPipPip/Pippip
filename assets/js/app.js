@@ -10,8 +10,6 @@ if (
     "localStorage" in window &&
     "addEventListener" in window
 ) {
-    const body = document.body;
-
     baguetteBox.run(".gallery");
 
     const multipleDefault = new Choices(
@@ -42,7 +40,7 @@ if (
     navToggle.addEventListener("click", function(e) {
         this.classList.toggle("active");
 
-        body.classList.toggle("nav-open");
+        document.body.classList.toggle("nav-open");
     });
 
     const links = document.links;
