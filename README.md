@@ -41,6 +41,7 @@ Fonts:
 From the root pippip folder:
 
 -   Run `npm install`
+-   Update `localUrl` in `gulpfile.js` with local site domain
 -   Run `gulp` to start compiling & watching the files
 
 Foundation:

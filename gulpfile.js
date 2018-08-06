@@ -1,3 +1,7 @@
+/*
+    Pippip v2 Gulpfile
+*/
+
 let localUrl = "http://lh.vanilla.com:8080",
     gulp = require("gulp"),
     browserSync = require("browser-sync").create(),
@@ -82,7 +86,7 @@ gulp.task("minify", () => {
  * Tasks
  */
 
-gulp.task("default", ["js", "minify"], function() {
+gulp.task("default", ["sass", "js", "minify"], function() {
     browserSync.init({
         proxy: localUrl,
         files: `**/*`,
