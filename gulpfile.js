@@ -12,7 +12,6 @@ let localUrl = "http://lh.vanilla.com:8080",
     uglify = require("gulp-uglify"),
     babel = require("babelify"),
     tap = require("gulp-tap"),
-    gutil = require("gulp-util"),
     paths = {
         js: ["./assets/js/*.js"],
         css: ["./assets/css/*.css"],
@@ -32,12 +31,8 @@ gulp.task("js", function() {
         .src(paths.js, { read: false })
         .pipe(
             tap(function(file) {
-                gutil.log("bundling " + file.path);
-
                 // replace file contents with browserify's bundle stream
-                file.contents = browserify(file.path, {
-                    debug: true
-                })
+                file.contents = browserify(file.path, { debug: true })
                     .transform(babel)
                     .bundle();
             })
@@ -49,17 +44,9 @@ gulp.task("js", function() {
         .pipe(gulp.dest(paths.dist + "js"));
 });
 
-/*
- * Task - Serve
- */
-
-gulp.task("serve", () => {
-    browserSync.init({
-        //server: 'lh.gulp.com:8080',
-        proxy: localUrl,
-        files: `**/*`,
-        ghostMode: false
-    });
+gulp.task("js-watch", ["js"], function(done) {
+    browserSync.reload();
+    done();
 });
 
 /*
@@ -92,19 +79,18 @@ gulp.task("minify", () => {
 });
 
 /*
- * Task - Watch
- */
-
-gulp.task("watch", function() {
-    gulp.watch(paths.sass, ["sass"]);
-    gulp.watch(paths.js, ["js"]);
-
-    // BrowserSync refresh on template change
-    gulp.watch(paths.templates).on("change", reload);
-});
-
-/*
  * Tasks
  */
 
-gulp.task("default", ["serve", "watch"]);
+gulp.task("default", ["js", "minify"], function() {
+    browserSync.init({
+        //server: 'lh.gulp.com:8080',
+        proxy: localUrl,
+        files: `**/*`,
+        ghostMode: false
+    });
+
+    gulp.watch(paths.js, ["js-watch"]);
+    gulp.watch(paths.sass, ["sass"]);
+    gulp.watch(paths.templates).on("change", reload);
+});
