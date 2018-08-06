@@ -1,8 +1,5 @@
 let localUrl = "http://lh.vanilla.com:8080",
     gulp = require("gulp"),
-    webpack = require("webpack"),
-    webpackStream = require("webpack-stream"),
-    webpackConfig = require("./webpack.config.js"),
     browserSync = require("browser-sync").create(),
     reload = browserSync.reload,
     sass = require("gulp-sass"),
@@ -10,14 +7,19 @@ let localUrl = "http://lh.vanilla.com:8080",
     sourcemaps = require("gulp-sourcemaps"),
     plumber = require("gulp-plumber"),
     imagemin = require("gulp-imagemin"),
+    browserify = require("browserify"),
+    buffer = require("vinyl-buffer"),
+    uglify = require("gulp-uglify"),
+    babel = require("babelify"),
+    tap = require("gulp-tap"),
+    gutil = require("gulp-util"),
     paths = {
-        assets: ["./assets"],
         js: ["./assets/js/*.js"],
         css: ["./assets/css/*.css"],
         sass: ["./assets/sass/**/*.scss"],
         imgs: ["./assets/img/**/*"],
         svg: ["./assets/svg/**/*.svg"],
-        twig: ["**/*.html"],
+        templates: ["**/*.html"],
         dist: ["./dist/"]
     };
 
@@ -25,13 +27,26 @@ let localUrl = "http://lh.vanilla.com:8080",
  * Task - JS
  */
 
-gulp.task("js", () => {
-    gulp.src(`${paths.js}`)
+gulp.task("js", function() {
+    return gulp
+        .src(paths.js, { read: false })
         .pipe(
-            webpackStream(webpackConfig),
-            webpack
+            tap(function(file) {
+                gutil.log("bundling " + file.path);
+
+                // replace file contents with browserify's bundle stream
+                file.contents = browserify(file.path, {
+                    debug: true
+                })
+                    .transform(babel)
+                    .bundle();
+            })
         )
-        .pipe(gulp.dest("./dist/js"));
+        .pipe(buffer())
+        .pipe(sourcemaps.init({ loadMaps: true }))
+        .pipe(uglify())
+        .pipe(sourcemaps.write("./"))
+        .pipe(gulp.dest(paths.dist + "js"));
 });
 
 /*
@@ -85,7 +100,7 @@ gulp.task("watch", function() {
     gulp.watch(paths.js, ["js"]);
 
     // BrowserSync refresh on template change
-    gulp.watch(paths.twig).on("change", reload);
+    gulp.watch(paths.templates).on("change", reload);
 });
 
 /*
