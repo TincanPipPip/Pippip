@@ -37,7 +37,7 @@ baguetteBox.run(".gallery");
     Usage:
     Selects all <select> elements by default
 */
-const multipleDefault = new Choices(document.getElementsByTagName("select"));
+const multipleDefault = new Choices("select");
 
 /*
     Carousel
