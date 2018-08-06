@@ -26,6 +26,8 @@ import VanillaModal from "vanilla-modal";
                 <img src="path-to-thumbnail" alt="" />
             </a>
         </div>
+
+        Note: If not using, remove @import "modules/baguette"; from `assets/sass/global.scss`
     */
 baguetteBox.run(".gallery");
 
@@ -36,6 +38,8 @@ baguetteBox.run(".gallery");
     
         Usage:
         Selects all <select> elements by default
+
+        Note: If not using, remove @import "modules/choices"; from `assets/sass/global.scss`
     */
 const multipleDefault = new Choices("select");
 
@@ -50,6 +54,8 @@ const multipleDefault = new Choices("select");
                 <!-- slide content -->
             </div>
         </div>
+
+        Note: If not using, remove @import "modules/flickity"; from `assets/sass/global.scss`
     */
 const flickity = new Flickity(".carousel", {
     cellAlign: "left",
@@ -82,6 +88,8 @@ const scroll = new SmoothScroll("a[data-scroll]", {
         <a href="#target-id" data-modal-open></a>
     
         <div id="target-id" data-modal-content class="modal-content"></div>
+
+        Note: If not using, remove @import "modules/modal"; from `assets/sass/global.scss`
     */
 const modal = new VanillaModal({ clickOutside: true, closeKeys: [27] });
 
