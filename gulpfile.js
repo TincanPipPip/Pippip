@@ -84,7 +84,6 @@ gulp.task("minify", () => {
 
 gulp.task("default", ["js", "minify"], function() {
     browserSync.init({
-        //server: 'lh.gulp.com:8080',
         proxy: localUrl,
         files: `**/*`,
         ghostMode: false
