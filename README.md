@@ -53,16 +53,7 @@ Foundation:
 Pippip v2 is SASS based.
 
 -   `assets/sass/global.scss` contains all imports to generate single `dist/css/style.css`
--   `assets/sass/custom/_style.scss` should contain main site styles
--   `assets/sass/global/*.scss` contain header & footer styles
--   `assets/sass/helpers/_defaults.scss` contains general one size fit all styles
--   `assets/sass/helpers/_icon-template.scss` & `assets/sass/helpers/_icon.scss` are helpers for the Gulp SVG sprite task
--   `assets/sass/modules/*.scss` contain styles for included plugins
--   `assets/sass/setup/_fonts.scss` should contain font info
--   `assets/sass/setup/_mediaq.scss` contains media query breakpoints
--   `assets/sass/setup/_mixins.scss` should hold all SASS mixins
--   `assets/sass/setup/_vars.scss` should hold all SASS variables
--   `assets/sass/vendor/*.scss` contain vendor styles from Foundation, Normalize, Animate.css, IncludeMedia
+-   **_ TODO _**
 
 ## JS
 
@@ -78,3 +69,6 @@ Pippip v2 is ES6 based, but gets converted to ES5 on compile
 -   svg sprite
 -   img sprite?
 -   this doc
+-   add vars to plugin sass
+-   nav & front sass
+-   check all sass files
