@@ -1,25 +1,28 @@
 // --------------------------------
 //					    MASTER FILE
 // --------------------------------
-
-@import "vendor/normalize";
-@import "vendor/foundation";
 @import "vendor/include-media";
-@import "vendor/animate";
-
-@import "setup/mediaq";
-@import "setup/mixins";
-@import "setup/vars";
-@import "setup/fonts";
-
-@import "helpers/defaults";
+@import "base/normalize";
 @import "helpers/icon";
 
-@import "modules/baguette";
-@import "modules/choices";
-@import "modules/flickity";
-@import "modules/modal";
+@import "helpers/mediaq";
+@import "helpers/mixins";
+@import "helpers/vars";
+@import "helpers/fonts";
 
-@import "global/header";
-@import "custom/style";
-@import "global/footer";
+@import "base/defaults";
+
+@import "vendor/animate";
+@import "vendor/baguette";
+@import "vendor/choices";
+@import "vendor/flickity";
+@import "vendor/modal";
+
+@import "layout/foundation";
+@import "layout/header";
+@import "layout/style";
+@import "layout/footer";
+
+@import "components/nav";
+
+@import "pages/front";
