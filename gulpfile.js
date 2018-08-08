@@ -17,6 +17,7 @@ let localUrl = "http://lh.vanilla.com:8080",
     babel = require("babelify"),
     tap = require("gulp-tap"),
     gutil = require("gulp-util"),
+    eslint = require("gulp-eslint"),
     paths = {
         js: ["./assets/js/*.js"],
         css: ["./assets/css/*.css"],
@@ -34,6 +35,24 @@ let localUrl = "http://lh.vanilla.com:8080",
 gulp.task("js", function() {
     return gulp
         .src(paths.js, { read: false })
+        .pipe(
+            eslint({
+                rules: {
+                    "my-custom-rule": 1,
+                    strict: 2
+                },
+                globals: ["jQuery", "$"],
+                envs: ["browser"]
+            })
+        )
+        .pipe(eslint.formatEach("compact", process.stderr))
+        .pipe(eslint.format())
+        .pipe(
+            plumber(function(error) {
+                gutil.log(error.message);
+                this.emit("end");
+            })
+        )
         .pipe(
             tap(function(file) {
                 // replace file contents with browserify's bundle stream
