@@ -16,6 +16,7 @@ let localUrl = "http://lh.vanilla.com:8080",
     uglify = require("gulp-uglify"),
     babel = require("babelify"),
     tap = require("gulp-tap"),
+    gutil = require("gulp-util"),
     paths = {
         js: ["./assets/js/*.js"],
         css: ["./assets/css/*.css"],
@@ -59,12 +60,17 @@ gulp.task("js-watch", ["js"], function(done) {
 
 gulp.task("sass", function() {
     gulp.src(paths.sass)
-        .pipe(plumber())
+        .pipe(
+            plumber(function(error) {
+                gutil.log(error.message);
+                this.emit("end");
+            })
+        )
         .pipe(sourcemaps.init())
         .pipe(sass({ outputStyle: "compressed" }))
         .pipe(
             autoprefixer({
-                browsers: ["last 2 versions", "ie 9", "iOS 8"]
+                browsers: ["last 3 versions", "ie 9", "iOS 8"]
             })
         )
         .pipe(sourcemaps.write("./"))
