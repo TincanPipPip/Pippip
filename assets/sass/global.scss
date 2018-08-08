@@ -4,23 +4,21 @@
 
 @import "base/normalize";
 @import "../../node_modules/reflex-grid/scss/reflex.scss";
-@import "vendor/include-media";
-@import "helpers/icon";
+@import "../../node_modules/animate-sass/animate";
 
 @import "helpers/mediaq";
 @import "helpers/mixins";
 @import "helpers/vars";
 @import "helpers/fonts";
 
-@import "base/defaults";
-
-@import "vendor/animate";
-@import "vendor/baguette";
-@import "vendor/choices";
-@import "vendor/flickity";
+@import "vendor/include-media";
+@import "../../node_modules/baguettebox.js/src/baguetteBox";
+@import "../../node_modules/choices.js/assets/styles/scss/choices";
+//@import "../../node_modules/flickity/css/flickity.css";
 @import "vendor/modal";
 
-//@import "layout/foundation";
+@import "base/defaults";
+
 @import "layout/header";
 @import "layout/style";
 @import "layout/footer";

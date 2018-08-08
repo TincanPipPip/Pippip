@@ -13,7 +13,7 @@
     background: transparentize($color: $text, $amount: 0.2);
     z-index: -1;
     opacity: 0;
-    transition: opacity 0.2s, z-index 0s 0.2s;
+    transition: opacity 0.2s $easing, z-index 0s 0.2s $easing;
     text-align: center;
     overflow: hidden;
     overflow-y: auto;
@@ -41,7 +41,7 @@
 .vanilla-modal.modal-visible .modal {
     z-index: 99;
     opacity: 1;
-    transition: opacity 0.2s;
+    transition: opacity 0.2s $easing;
 }
 
 .modal-inner {
@@ -55,15 +55,25 @@
     z-index: -1;
     opacity: 0;
     transform: scale(0);
-    transition: opacity 0.2s, transform 0.2s, z-index 0s 0.2s;
+    transition: opacity 0.2s $easing, transform 0.2s $easing,
+        z-index 0s 0.2s $easing;
     padding: $bump;
     cursor: default;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    @include media("<=sm") {
+        padding: $bump/2;
+    }
 }
 .modal-visible .modal-inner {
     z-index: 100;
     opacity: 1;
     transform: scale(1);
-    transition: opacity 0.2s, transform 0.2s;
+    transition: opacity 0.2s $easing, transform 0.2s $easing;
 }
 
 [data-modal-close] {
@@ -79,4 +89,16 @@
     text-align: center;
     background: #fff;
     box-shadow: -1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+[data-modal-content] {
+    display: none;
+
+    .modal & {
+        display: inline-block;
+    }
+}
+
+.modal-visible {
+    overflow-y: hidden;
 }

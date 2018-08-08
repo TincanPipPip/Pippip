@@ -12,12 +12,11 @@
         "baguettebox.js": "^1.10.0",
         "choices.js": "^3.0.4",
         "flickity": "^2.1.2",
-        "matchheight": "^0.1.1",
-        "npm-check": "^5.8.0",
         "smooth-scroll": "^14.2.1",
         "vanilla-modal": "^1.6.5"
     },
     "devDependencies": {
+        "animate-sass": "^0.8.2",
         "babel-core": "^6.26.3",
         "babel-preset-env": "^1.7.0",
         "babelify": "^8.0.0",

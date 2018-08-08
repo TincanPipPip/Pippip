@@ -2,12 +2,28 @@
 //					       DEFAULTS
 // --------------------------------
 
+// Grid default row width & gutter
+.grid {
+    max-width: 1720px;
+
+    [class*="col-"] {
+        padding: $bump;
+
+        @include media("<=xs") {
+            padding: $bump/2;
+        }
+    }
+}
+
+// Matchelement heights
+.matchheight > * {
+    height: 100%;
+}
+
 body,
 html {
     @include font-body;
     color: $text;
-    height: 100%;
-    -webkit-text-size-adjust: 100%;
 }
 
 // Text & links
@@ -43,7 +59,7 @@ small {
 
 a {
     text-decoration: none;
-    transition: all 0.2s ease-out;
+    transition: all 0.2s $easing;
 }
 
 img {
@@ -116,7 +132,7 @@ img {
 //	width: 30px;
 //	background-image:url('../img/emClose.png');
 //	cursor:pointer;
-//	transition:opacity 0.2s ease-out;
+//	transition:opacity 0.2s $easing;
 //
 //	&:hover {
 //		opacity:0.7;
@@ -134,12 +150,12 @@ select {
     @include font-body;
     color: $text;
     resize: none;
-    padding: 0.5em 1em;
+    padding: $bump/2 $bump;
     -webkit-border-radius: 0px;
     border-radius: 0;
     outline: 0;
     border: 1px solid $text;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.2s $easing;
 }
 
 input[type="search"],
@@ -227,7 +243,7 @@ input[type="submit"] {
     }
 }
 
-@include media("<small") {
+@include media("<=xs") {
     .two-col,
     .three-col,
     .four-col,
@@ -251,12 +267,12 @@ input[type="submit"] {
         display: inline-block;
 
         a {
-            padding: 10px 20px;
+            padding: $bump/3 $bump/1.5;
             display: block;
         }
 
         &.pager-current {
-            padding: 10px 20px;
+            padding: $bump/3 $bump/1.5;
         }
     }
 }
@@ -276,17 +292,17 @@ body.user-logged-in {
     ul {
         @include li-reset;
         border: 0;
-        margin: 1em 0;
+        margin: $bump 0;
         padding: 0;
 
         li {
-            margin-right: 1em;
+            margin-right: $bump;
             display: inline-block;
 
             a {
                 color: $text;
                 background: $bg;
-                padding: 0.5em 1em;
+                padding: $bump/2 $bump;
                 margin: 0;
                 border: 1px solid $text;
                 display: block;

@@ -97,7 +97,7 @@ gulp.task("sass", function() {
  * Task - Minify Images
  */
 
-gulp.task("minify", () => {
+gulp.task("images", () => {
     gulp.src(paths.imgs)
         .pipe(imagemin())
         .pipe(gulp.dest(paths.dist + "img"));
@@ -107,7 +107,7 @@ gulp.task("minify", () => {
  * Tasks
  */
 
-gulp.task("default", ["sass", "js", "minify"], function() {
+gulp.task("default", ["sass", "js", "images"], function() {
     browserSync.init({
         proxy: localUrl,
         files: `**/*`,

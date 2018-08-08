@@ -1,20 +1,9 @@
-//import MatchHeight from "matchheight";
 import baguetteBox from "baguettebox.js";
 import Choices from "choices.js";
-import Flickity from "flickity";
+//import Flickity from "flickity";
 import SmoothScroll from "smooth-scroll";
 import VanillaModal from "vanilla-modal";
 
-/*
-        Matchheight
-        url: https://www.npmjs.com/package/matchheight
-    
-        Usage:
-        <div data-mh></div>
-    
-        Runs by default
-    */
-console.log("hi");
 /*
         Image galleries
         url: https://www.npmjs.com/package/flickity
@@ -27,7 +16,7 @@ console.log("hi");
             </a>
         </div>
 
-        Note: If not using, remove @import "modules/baguette"; from `assets/sass/global.scss`
+        Note: If not using, remove @import "../../node_modules/baguettebox.js/src/baguetteBox"; from `assets/sass/global.scss`
     */
 baguetteBox.run(".gallery");
 
@@ -39,7 +28,7 @@ baguetteBox.run(".gallery");
         Usage:
         Selects all <select> elements by default
 
-        Note: If not using, remove @import "modules/choices"; from `assets/sass/global.scss`
+        Note: If not using, remove @import "../../node_modules/choices.js/assets/styles/scss/choices"; from `assets/sass/global.scss`
     */
 const multipleDefault = new Choices("select");
 
@@ -55,15 +44,15 @@ const multipleDefault = new Choices("select");
             </div>
         </div>
 
-        Note: If not using, remove @import "modules/flickity"; from `assets/sass/global.scss`
-    */
+        Note: Disabled by default. To enable uncomment import above and code below and uncoment @import "../../node_modules/flickity/css/flickity.css"; from `assets/sass/global.scss`
 
-const flickity = new Flickity(".carousel", {
-    cellAlign: "left",
-    cellSelector: ".carousel-cell",
-    contain: true,
-    imagesLoaded: true
-});
+        const flickity = new Flickity(".carousel", {
+            cellAlign: "left",
+            cellSelector: ".carousel-cell",
+            contain: true,
+            imagesLoaded: true
+        });
+    */
 
 /*
         Achor scroll
@@ -71,12 +60,9 @@ const flickity = new Flickity(".carousel", {
         -----------------------------------------------
     
         Usage:
-        <a href="#target-id" data-scroll></a>
+        <a href="#target-id" class="scroll"></a>
     */
-const scroll = new SmoothScroll("a[data-scroll]", {
-    offset: function() {
-        return -90;
-    },
+const scroll = new SmoothScroll("a.scroll", {
     updateURL: false,
     popstate: false
 });
@@ -101,8 +87,6 @@ const modal = new VanillaModal({ clickOutside: true, closeKeys: [27] });
 const navToggle = document.getElementById("js-navToggle");
 
 navToggle.addEventListener("click", function(e) {
-    this.classList.toggle("active");
-
     document.body.classList.toggle("nav-open");
 });
 
