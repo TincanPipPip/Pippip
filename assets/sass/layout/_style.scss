@@ -63,15 +63,3 @@ section {
 [data-mh] {
     height: 100%;
 }
-
-// MODAL TO REUSE
-[data-modal-content] {
-    display: none;
-
-    .modal & {
-        display: inline-block;
-    }
-}
-.modal-visible {
-    overflow-y: hidden;
-}
