@@ -1,12 +1,13 @@
 {
     "name": "pippip",
     "version": "1.0.0",
-    "description": "",
-    "main": "gulpfile.js",
-    "scripts": {
-        "build": "webpack --progress --watch"
+    "repository": {
+        "type": "git",
+        "url": "*** TODO ***"
     },
-    "author": "",
+    "description": "Tincan base theme",
+    "main": "gulpfile.js",
+    "author": "Harry Edwards",
     "license": "ISC",
     "dependencies": {
         "baguettebox.js": "^1.10.0",

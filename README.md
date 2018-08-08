@@ -86,8 +86,6 @@ Pippip v2 is ES6 based (rather than jQuery) by default, and gets converted to ES
 
 Usage notes for each plugin can be found in `assets/js/defaults.js`
 
--   Matchheight
-    -   Equalise element heights
 -   BaugetteBox
     -   Image lightbox
 -   Choices
@@ -104,6 +102,6 @@ Usage notes for each plugin can be found in `assets/js/defaults.js`
 #### Todo
 
 -   this doc
--   rm, matchheight, try align-content
 -   flexbox .listing?
--   new grid docu & test
+-   add DP/WP files as branches
+-   styleguide
