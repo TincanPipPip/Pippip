@@ -38,15 +38,11 @@ gulp.task("js", function() {
         .pipe(
             eslint({
                 rules: {
-                    "my-custom-rule": 1,
+                    "no-console": 1,
                     strict: 2
-                },
-                globals: ["jQuery", "$"],
-                envs: ["browser"]
+                }
             })
         )
-        .pipe(eslint.formatEach("compact", process.stderr))
-        .pipe(eslint.format())
         .pipe(
             plumber(function(error) {
                 gutil.log(error.message);

@@ -14,7 +14,7 @@ import VanillaModal from "vanilla-modal";
     
         Runs by default
     */
-
+console.log("hi");
 /*
         Image galleries
         url: https://www.npmjs.com/package/flickity
