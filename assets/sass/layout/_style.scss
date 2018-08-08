@@ -1,21 +1,24 @@
 // --------------------------------
 //					   		 STYLES
 // --------------------------------
+.grid-main {
+    padding: 0;
+    min-width: 100%;
 
-body {
-    //text-align: center;
+    & > [class*="col-"] {
+        padding: 0;
+    }
 }
-
-h1 {
-    margin: $bump * 3 auto $bump * 2;
-}
-
 section {
     padding: $bump * 2 $bump;
     background: #f0f0f0;
 
     &:nth-of-type(odd) {
         background: #a7a7a7;
+    }
+
+    @include media("<=sm") {
+        padding: $bump/3;
     }
 
     &.nav {
@@ -58,8 +61,4 @@ section {
 .teaser {
     background: #fff;
     padding: $bump;
-}
-
-[data-mh] {
-    height: 100%;
 }
