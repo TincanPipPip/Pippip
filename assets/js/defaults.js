@@ -1,4 +1,4 @@
-import MatchHeight from "matchheight";
+//import MatchHeight from "matchheight";
 import baguetteBox from "baguettebox.js";
 import Choices from "choices.js";
 import Flickity from "flickity";
@@ -57,10 +57,12 @@ const multipleDefault = new Choices("select");
 
         Note: If not using, remove @import "modules/flickity"; from `assets/sass/global.scss`
     */
+
 const flickity = new Flickity(".carousel", {
     cellAlign: "left",
     cellSelector: ".carousel-cell",
-    contain: true
+    contain: true,
+    imagesLoaded: true
 });
 
 /*

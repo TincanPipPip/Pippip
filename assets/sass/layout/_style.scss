@@ -34,10 +34,18 @@ section {
     }
 }
 
-.listing {
-    li {
+.gallery {
+    @include li-reset;
+    li a {
         background: white;
         padding: $bump/2;
+        margin: 0 2%;
+        display: block;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
     }
 }
 
@@ -45,6 +53,15 @@ section {
     padding: $bump;
     display: block;
     width: 100%;
+}
+
+.teaser {
+    background: #fff;
+    padding: $bump;
+}
+
+[data-mh] {
+    height: 100%;
 }
 
 // MODAL TO REUSE

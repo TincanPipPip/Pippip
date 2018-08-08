@@ -1,8 +1,10 @@
 // --------------------------------
 //					    MASTER FILE
 // --------------------------------
-@import "vendor/include-media";
+
 @import "base/normalize";
+@import "../../node_modules/reflex-grid/scss/reflex.scss";
+@import "vendor/include-media";
 @import "helpers/icon";
 
 @import "helpers/mediaq";
@@ -18,7 +20,7 @@
 @import "vendor/flickity";
 @import "vendor/modal";
 
-@import "layout/foundation";
+//@import "layout/foundation";
 @import "layout/header";
 @import "layout/style";
 @import "layout/footer";

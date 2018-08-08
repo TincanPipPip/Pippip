@@ -33,7 +33,8 @@
         "gulp-uglify": "^3.0.1",
         "gulp-util": "^3.0.8",
         "tap": "^12.0.1",
-        "vinyl-buffer": "^1.0.1"
+        "vinyl-buffer": "^1.0.1",
+        "reflex-grid": "^2.0.3"
     },
     "babel": {
         "presets": [

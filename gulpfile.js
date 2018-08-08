@@ -70,7 +70,7 @@ gulp.task("sass", function() {
         .pipe(sass({ outputStyle: "compressed" }))
         .pipe(
             autoprefixer({
-                browsers: ["last 3 versions", "ie 9", "iOS 8"]
+                browsers: ["last 3 versions", "ie 10", "iOS 8"]
             })
         )
         .pipe(sourcemaps.write("./"))

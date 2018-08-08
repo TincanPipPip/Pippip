@@ -66,7 +66,7 @@ Pippip v2 is ES6 based, but gets converted to ES5 on compile
 
 #### Todo
 
--   svg sprite
+-   svg sprite?
 -   img sprite?
 -   this doc
 -   add vars to plugin sass
@@ -74,3 +74,5 @@ Pippip v2 is ES6 based, but gets converted to ES5 on compile
 -   check all sass files
 -   rm, amtchheight, try align-content
 -   flexbox .listing?
+-   rm matchheight?
+-   new grid docu & test
