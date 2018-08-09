@@ -172,86 +172,93 @@ input[type="submit"] {
 // UL cols
 .listing {
     @include li-reset;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 (-$bump/2);
 
-    li {
-        vertical-align: top;
-        margin-bottom: 2%;
-        margin-right: 2%;
-        float: left;
-        position: relative;
+    @include media("<=sm") {
+        margin: 0 (-$bump/3);
     }
-}
 
-.one-col {
+    @include media("<=xs") {
+        margin: 0;
+    }
+
     li {
-        width: 100%;
-        margin-right: 0;
+        padding: $bump/2;
 
-        &:last-child {
-            margin-bottom: 0;
+        @include media("<=sm") {
+            padding: 0 $bump/3 $bump/1.5;
+        }
+
+        @include media("<=xs") {
+            padding: 0 0 $bump;
         }
     }
-}
 
-.two-col {
-    li {
-        width: 49%;
-
-        &:nth-of-type(2n + 2) {
-            margin-right: 0;
-        }
-    }
-}
-
-.three-col {
-    li {
-        width: 32%;
-
-        &:nth-of-type(3n + 3) {
-            margin-right: 0;
-        }
-    }
-}
-
-.four-col {
-    li {
-        width: 23.5%;
-
-        &:nth-of-type(4n + 4) {
-            margin-right: 0;
-        }
-    }
-}
-
-.five-col {
-    li {
-        width: 18.4%;
-
-        &:nth-of-type(5n + 5) {
-            margin-right: 0;
-        }
-    }
-}
-
-.six-col {
-    li {
-        width: 15%;
-
-        &:nth-of-type(6n + 6) {
-            margin-right: 0;
-        }
-    }
-}
-
-@include media("<=xs") {
-    .two-col,
-    .three-col,
-    .four-col,
-    .five-col,
-    .six-col {
+    &--one-col {
         li {
-            width: 100%;
-            margin-right: 0;
+            flex-basis: 100%;
+        }
+    }
+
+    &--two-col {
+        li {
+            flex-basis: 50%;
+
+            @include media("<=xs") {
+                flex-basis: 100%;
+            }
+        }
+    }
+
+    &--three-col {
+        li {
+            flex-basis: 33.3333%;
+
+            @include media("<=xs") {
+                flex-basis: 100%;
+            }
+        }
+    }
+    &--four-col {
+        li {
+            flex-basis: 25%;
+
+            @include media("<=sm") {
+                flex-basis: 50%;
+            }
+
+            @include media("<=xs") {
+                flex-basis: 100%;
+            }
+        }
+    }
+    &--five-col {
+        li {
+            flex-basis: 20%;
+
+            @include media("<=sm") {
+                flex-basis: 33.3333%;
+            }
+
+            @include media("<=xs") {
+                flex-basis: 100%;
+            }
+        }
+    }
+    &--six-col {
+        li {
+            flex-basis: 16.6666%;
+
+            @include media("<=sm") {
+                flex-basis: 33.3333%;
+            }
+
+            @include media("<=xs") {
+                flex-basis: 100%;
+            }
         }
     }
 }

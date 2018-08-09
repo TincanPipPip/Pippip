@@ -1,8 +1,8 @@
 import baguetteBox from "baguettebox.js";
 import Choices from "choices.js";
-//import Flickity from "flickity";
 import SmoothScroll from "smooth-scroll";
 import VanillaModal from "vanilla-modal";
+//import Flickity from "flickity";
 
 /*
         Image galleries
@@ -18,7 +18,10 @@ import VanillaModal from "vanilla-modal";
 
         Note: If not using, remove @import "../../node_modules/baguettebox.js/src/baguetteBox"; from `assets/sass/global.scss`
     */
-baguetteBox.run(".gallery");
+
+if (document.querySelectorAll(".gallery")) {
+    baguetteBox.run(".gallery");
+}
 
 /*
         Better <select> elements
@@ -30,7 +33,9 @@ baguetteBox.run(".gallery");
 
         Note: If not using, remove @import "../../node_modules/choices.js/assets/styles/scss/choices"; from `assets/sass/global.scss`
     */
-const multipleDefault = new Choices("select");
+if (document.querySelectorAll("select").length > 0) {
+    const multipleDefault = new Choices("select");
+}
 
 /*
         Carousel
@@ -62,10 +67,12 @@ const multipleDefault = new Choices("select");
         Usage:
         <a href="#target-id" class="scroll"></a>
     */
-const scroll = new SmoothScroll("a.scroll", {
-    updateURL: false,
-    popstate: false
-});
+if (document.querySelectorAll("a.scroll")) {
+    const scroll = new SmoothScroll("a.scroll", {
+        updateURL: false,
+        popstate: false
+    });
+}
 
 /*
         Modal links
@@ -85,10 +92,11 @@ const modal = new VanillaModal({ clickOutside: true, closeKeys: [27] });
         Menu burger
     */
 const navToggle = document.getElementById("js-navToggle");
-
-navToggle.addEventListener("click", function(e) {
-    document.body.classList.toggle("nav-open");
-});
+if (navToggle) {
+    navToggle.addEventListener("click", function(e) {
+        document.body.classList.toggle("nav-open");
+    });
+}
 
 /*
         Automatically open external links in new tab
