@@ -77,6 +77,7 @@ Pippip v2 is [SASS](https://sass-lang.com) based.
     -   `../../node_modules/flickity/css/flickity.css` - JS module stylesheet
     -   `./assets/sass/vendor/modal` - JS Vanilla modal styles
     -   `./assets/sass/base/defaults` - general default styling applied to all sites
+    -   `./assets/sass/base/_drupal.scss` - Drupal specific default styles
     -   `./assets/sass/layout/*` - overall global styles (e.g. `_header.scss`, `_footer.scss`, `_styles.scss`)
     -   `./assets/sass/components/*` - specific components (e.g. `_nav.scss`)
     -   `./assets/sass/pages/*` - page/CT specific (e.g. `_front.scss`)

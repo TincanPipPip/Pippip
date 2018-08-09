@@ -1,0 +1,58 @@
+// Pagination
+.pager {
+    @include li-reset;
+    text-align: center;
+    display: block;
+    clear: both;
+
+    li {
+        display: inline-block;
+
+        a {
+            padding: $bump/3 $bump/1.5;
+            display: block;
+        }
+
+        &.pager-current {
+            padding: $bump/3 $bump/1.5;
+        }
+    }
+}
+
+// Admnin styles
+
+// w/ admin bar
+body.user-logged-in {
+    // Open Shortcut menu
+    &.toolbar-tray-open {
+    }
+}
+
+.admin-functions {
+    ul {
+        @include li-reset;
+        border: 0;
+        margin: $bump 0;
+        padding: 0;
+
+        li {
+            margin-right: $bump;
+            display: inline-block;
+
+            a {
+                color: $text;
+                background: $bg;
+                padding: $bump/2 $bump;
+                margin: 0;
+                border: 1px solid $text;
+                display: block;
+
+                &.active,
+                &:hover {
+                    color: $bg;
+                    background: $text;
+                }
+            }
+        }
+    }
+}
