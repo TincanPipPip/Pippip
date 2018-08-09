@@ -1,0 +1,31 @@
+body.logged-in {
+    // Open Shortcut menu
+    &.admin-menu-with-shortcuts {
+    }
+}
+
+.tabs {
+    ul {
+        border: 0 !important;
+        margin: 1em 0 !important;
+        padding: 0;
+
+        li {
+            margin-right: 1em;
+
+            a {
+                color: $text !important;
+                background: $bg !important;
+                padding: 0.5em 1em !important;
+                margin: 0 !important;
+                border: 1px solid $text;
+
+                &.active,
+                &:hover {
+                    color: $bg !important;
+                    background: $text !important;
+                }
+            }
+        }
+    }
+}
