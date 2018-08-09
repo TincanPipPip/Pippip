@@ -8,6 +8,7 @@ Contents:
 1. [Gulp](#Gulp)
    - [Gulp tasks](#Gulp-tasks)
 1. [CSS](#css)
+   - [Included helper classes](#included-helper-classes)
    - [SASS file structure](#sass-file-structure)
    - [Grid](#grid)
 1. [JS](#js)
@@ -67,6 +68,13 @@ Also included is [BrowserSync](https://browsersync.io/). This provides synchroni
 ## CSS
 
 Pippip v2 is [SASS](https://sass-lang.com) based.
+
+#### Included helper classes
+
+- `.hidden` - foricbly hides element from view & screen readers
+- `.clearfix` - standrad clearfix hack _(likely depreciated)_
+- `.listing` - for x-columns lists
+  - `.listing-x-col` (where x is one > six) - set the number of columns from `xs` breakpoint and up. Below this all child elements will be full width
 
 #### SASS file structure
 
