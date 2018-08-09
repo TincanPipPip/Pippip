@@ -32,7 +32,6 @@ Pippip v2 is a revision of the original Pippip Drupal/Wordpress theme, utilising
 1. Images:
 
     - Place all provided image assets in `./assets/img`
-    - ~~If making a svg sprite, place images in `./assets/svg`~~
 
 2. Fonts:
 
@@ -63,9 +62,28 @@ Pippip v2 is [SASS](https://sass-lang.com) based.
 
 #### SASS file structure
 
--   `assets/sass/global.scss` contains all imports to generate single `dist/css/style.css`
--   **TODO** Animate optional but there [site](https://github.com/tgdev/animate-sass)
--   **TODO**
+-   `./assets/sass/global.scss` contains all imports to generate single `dist/css/style.css`
+
+    -   `./assets/sass/base/normalize` - basic reset css
+    -   `../../node_modules/reflex-grid/scss/reflex.scss` - grid system
+    -   `../../node_modules/animate-sass/animate` - animate.css ([See note](#animate.css-note))
+    -   `./assets/sass/helpers/mediaq` - media query breakpoints
+    -   `./assets/sass/helpers/mixins` - sitewide mixins
+    -   `./assets/sass/helpers/vars` - sitewide variables
+    -   `./assets/sass/helpers/fonts` - font information
+    -   `./assets/sass/vendor/include-media` - Inline media queries mixins
+    -   `../../node_modules/baguettebox.js/src/baguetteBox` - JS module stylesheet
+    -   `../../node_modules/choices.js/assets/styles/scss/choices` - JS module stylesheet
+    -   `../../node_modules/flickity/css/flickity.css` - JS module stylesheet
+    -   `./assets/sass/vendor/modal` - JS Vanilla modal styles
+    -   `./assets/sass/base/defaults` - general default styling applied to all sites
+    -   `./assets/sass/layout/*` - overall global styles (e.g. `_header.scss`, `_footer.scss`, `_styles.scss`)
+    -   `./assets/sass/components/*` - specific components (e.g. `_nav.scss`)
+    -   `./assets/sass/pages/*` - page/CT specific (e.g. `_front.scss`)
+
+    ##### Animate.css note
+
+    By default the animate.css library doesn't import any css, you must enable the animations you require. [See docs](https://github.com/tgdev/animate-sass#animation-module-loading) for more info.
 
 #### Grid
 
@@ -86,15 +104,16 @@ Pippip v2 is ES6 based (rather than jQuery) by default, and gets converted to ES
 
 Usage notes for each plugin can be found in `assets/js/defaults.js`
 
--   BaugetteBox
+-   [BaugetteBox](https://www.npmjs.com/package/baguettebox.js)
     -   Image lightbox
--   Choices
+-   [Choices](https://www.npmjs.com/package/choices.js)
     -   Better select elements
--   Flickity
+-   [Flickity](https://www.npmjs.com/package/flickity)
     -   Carousels
--   SmoothScroll
+    -   **Disabled by default** See notes in `./assets/js/defaults.js` for enabling
+-   [SmoothScroll](https://www.npmjs.com/package/smooth-scroll)
     -   Anchor scroll animation
--   VanillaModal
+-   [VanillaModal](https://www.npmjs.com/package/vanilla-modal)
     -   Custom modal overlays
 
 ---
