@@ -122,6 +122,5 @@ Usage notes for each plugin can be found in `assets/js/defaults.js`
 #### Todo
 
 -   this doc
--   flexbox .listing?
 -   add DP/WP files as branches
 -   styleguide

@@ -24,7 +24,7 @@ let localUrl = "http://lh.vanilla.com:8080",
         sass: ["./assets/sass/**/*.scss"],
         imgs: ["./assets/img/**/*"],
         svg: ["./assets/svg/**/*.svg"],
-        templates: ["**/*.html"],
+        templates: ["templates/**/*"],
         dist: ["./dist/"]
     };
 
@@ -37,6 +37,7 @@ gulp.task("js", function() {
         .src(paths.js, { read: false })
         .pipe(
             eslint({
+                // Run lint
                 rules: {
                     "no-console": 1,
                     strict: 2
@@ -45,6 +46,7 @@ gulp.task("js", function() {
         )
         .pipe(
             plumber(function(error) {
+                // Output any errors without breaking stream
                 gutil.log(error.message);
                 this.emit("end");
             })
@@ -77,6 +79,7 @@ gulp.task("sass", function() {
     gulp.src(paths.sass)
         .pipe(
             plumber(function(error) {
+                // Output any errors without breaking stream
                 gutil.log(error.message);
                 this.emit("end");
             })
