@@ -1,0 +1,21 @@
+{%
+	set classes = [
+		'entity',
+		'entity__' ~ entity['#extra_content'].type.value.0['target_id']|clean_class,
+		'clearfix'
+	]
+%}
+
+<section{{ attributes.addClass(classes) }}>
+
+	{% block content %}
+
+		{% if not entity.field_display_title.0['#markup'] == null %}
+			<h2>{{ entity.title }}</h2>
+		{% endif %}
+
+		{{ entity }}
+
+	{% endblock %}
+
+</section>

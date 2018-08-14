@@ -1,0 +1,19 @@
+name: Pippip
+type: theme
+description: Syd base theme
+base theme: classy
+version: 8.x-2.0
+core: 8.x
+libraries:
+  - pippip/global
+
+regions:
+  header: Header
+  nav: Navigation
+  admin: Admin
+  content: Content
+  emergency: "Emergency message"
+  highlighted: Highlighted
+  help: Help
+  footer: Footer
+  hidden: Hidden
