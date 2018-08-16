@@ -2,19 +2,18 @@
 
 Contents:
 
-1. [About](#About)
-   - [Browser support](#browser-support)
-1. [Setup](#setup)
-1. [Gulp](#Gulp)
-   - [Gulp tasks](#Gulp-tasks)
-1. [CSS](#css)
-   - [Included helper classes](#included-helper-classes)
-   - [SASS file structure](#sass-file-structure)
-   - [Grid](#grid)
-1. [JS](#js)
-   - [Included JS files](#included-js-files)
-   - [Included plugins](#included-plugins)
-1. [Todo](#todo)
+- [About](#About)
+  - [Browser support](#browser-support)
+- [Setup](#setup)
+- [Gulp](#Gulp)
+  - [Gulp tasks](#Gulp-tasks)
+- [CSS](#css)
+  - [Included helper classes](#included-helper-classes)
+  - [SASS file structure](#sass-file-structure)
+  - [Grid](#grid)
+- [JS](#js)
+  - [Included JS files](#included-js-files)
+  - [Included plugins](#included-plugins)
 
 ## About
 
@@ -132,10 +131,3 @@ Usage notes for each plugin can be found in `assets/js/defaults.js`
   - Anchor scroll animation
 - [VanillaModal](https://www.npmjs.com/package/vanilla-modal)
   - Custom modal overlays
-
----
-
-#### Todo
-
-- this doc
-- styleguide
