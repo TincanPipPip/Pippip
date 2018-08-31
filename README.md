@@ -29,7 +29,7 @@ Pippip v2 is a revision of the original Pippip Drupal/Wordpress theme, utilising
 
 ## Setup
 
-1. (If installing separetely from Syd) Select CMS version codebase:
+1. (If installing separately from Syd) Select CMS version codebase:
 
    - Pippip supports Drupal 7, 8 & ~~Wordpress~~, each version is in its own branch, i.e:
 
