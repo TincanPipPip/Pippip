@@ -2,7 +2,7 @@
     Pippip v2 Gulpfile
 */
 
-let localUrl = "http://lh.xxx.com",
+const localUrl = "http://lh.xxx.com",
   gulp = require("gulp"),
   browserSync = require("browser-sync").create(),
   reload = browserSync.reload,
