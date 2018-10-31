@@ -2,10 +2,18 @@
 
 {% block content %}
 
-	{{ title_prefix }}
-		<h1>{{ node.title.value }}</h1>
-	{{ title_suffix }}
+	{% if view_mode == "teaser" %}
 
-	{{ content }}
+		{% include '@pippip/partials/teaser.html.twig' %}
+
+	{% else %}
+
+		{{ title_prefix }}
+			<h1>{{ node.title.value }}</h1>
+		{{ title_suffix }}
+
+		{{ content }}
+
+	{% endif %}
 		
 {% endblock %}
