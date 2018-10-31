@@ -1,0 +1,17 @@
+<a 
+  href="{{ url }}" 
+  title="
+    {% if type == 'homepage' %}
+      Back to homepage
+    {% else %}
+      Open {{ node.title.value }}
+    {% endif %}
+  ">
+		
+  <h3>{{ node.title.value }}</h3>
+
+  {% if content.body %}
+    {{ content.body }}
+  {% endif %}
+
+</a>

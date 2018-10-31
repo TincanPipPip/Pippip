@@ -4,15 +4,9 @@
 
 	{% if view_mode == "teaser" %}
 
-		<a href="{{ url }}" title="Open {{ node.title.value }}">
-		
-			<h3>{{ node.title.value }}</h3>
-
-			{% if content.body %}
-				{{ content.body }}
-			{% endif %}
-
-		</a>
+		{% include '@pippip/partials/teaser.html.twig' with {
+      'type' : 'homepage'
+    } %}
 
 	{% else %}
 
