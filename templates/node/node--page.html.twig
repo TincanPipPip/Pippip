@@ -2,10 +2,26 @@
 
 {% block content %}
 
-	{{ title_prefix }}
-		<h1>{{ node.title.value }}</h1>
-	{{ title_suffix }}
+	{% if view_mode == "teaser" %}
 
-	{{ content }}
+		<a href="{{ url }}" title="Open {{ node.title.value }}">
+		
+			<h3>{{ node.title.value }}</h3>
+
+			{% if content.body %}
+				{{ content.body }}
+			{% endif %}
+
+		</a>
+
+	{% else %}
+
+		{{ title_prefix }}
+			<h1>{{ node.title.value }}</h1>
+		{{ title_suffix }}
+
+		{{ content }}
+
+	{% endif %}
 		
 {% endblock %}

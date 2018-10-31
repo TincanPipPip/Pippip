@@ -6,13 +6,13 @@
 .grid {
   max-width: 1720px;
 
-  [class*="col-"] {
-    padding: $bump;
+  // [class*="col-"] {
+  //   padding: $bump;
 
-    @include media("<=xs") {
-      padding: $bump/2;
-    }
-  }
+  //   @include media("<=xs") {
+  //     padding: $bump/2;
+  //   }
+  // }
 }
 
 // Matchelement heights
@@ -60,6 +60,10 @@ small {
 a {
   text-decoration: none;
   transition: all 0.2s $easing;
+
+  &.no-click {
+    pointer-events: none;
+  }
 }
 
 img {
@@ -143,7 +147,7 @@ input[type="submit"] {
   @include li-reset;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   margin: 0 (-$bump/2);
 
   @include media("<=sm") {
@@ -154,7 +158,7 @@ input[type="submit"] {
     margin: 0;
   }
 
-  li {
+  & > li {
     padding: $bump/2;
 
     @include media("<=sm") {
@@ -167,66 +171,79 @@ input[type="submit"] {
   }
 
   &--one-col {
-    li {
+    & > li {
       flex-basis: 100%;
     }
   }
 
   &--two-col {
-    li {
+    & > li {
       flex-basis: 50%;
+      min-width: 50%;
 
       @include media("<=xs") {
         flex-basis: 100%;
+        min-width: 100%;
       }
     }
   }
 
   &--three-col {
-    li {
+    & > li {
       flex-basis: 33.3333%;
+      min-width: 33.3333%;
 
       @include media("<=xs") {
         flex-basis: 100%;
+        min-width: 100%;
       }
     }
   }
   &--four-col {
-    li {
+    & > li {
       flex-basis: 25%;
+      min-width: 25%;
 
       @include media("<=sm") {
         flex-basis: 50%;
+        min-width: 50%;
       }
 
       @include media("<=xs") {
         flex-basis: 100%;
+        min-width: 100%;
       }
     }
   }
   &--five-col {
-    li {
+    & > li {
       flex-basis: 20%;
+      min-width: 20%;
 
       @include media("<=sm") {
         flex-basis: 33.3333%;
+        min-width: 33.3333%;
       }
 
       @include media("<=xs") {
         flex-basis: 100%;
+        min-width: 100%;
       }
     }
   }
   &--six-col {
-    li {
+    & > li {
       flex-basis: 16.6666%;
+      max-width: 16.6666%;
 
       @include media("<=sm") {
         flex-basis: 33.3333%;
+        max-width: 33.3333%;
       }
 
       @include media("<=xs") {
         flex-basis: 100%;
+        max-width: 100%;
       }
     }
   }
