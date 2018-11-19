@@ -41,7 +41,7 @@
 #}
 <header id="js-header" class="header">
 
-	<a href="/" title="{% trans %}Home{% endtrans %}" rel="home" class="header__logo">Pippip</a>
+	<a href="/" title="{{ drupal_config('system.site', 'name') }}" rel="home" class="header__logo">{% include '@pippip/partials/svg/logo.html.twig' %}</a>
 
 	{{ page.nav }}
 
@@ -49,11 +49,11 @@
 
 </header>
 
-{% if page.emergency %}
-	{{ page.emergency }}
-{% endif %}
-
 <div id="js-wrapper" class="wrapper">
+
+	{% if page.emergency %}
+		{{ page.emergency }}
+	{% endif %}
 
 	{% if page.admin or page.help or page.highlighted %}
 		<div class="admin-functions grid justify-center">
@@ -89,6 +89,8 @@
 
 	<footer class="footer clearfix">
 		{{ page.footer }}
+
+		{{ drupal_menu('footer') }}
 	</footer>
 	
 </div>

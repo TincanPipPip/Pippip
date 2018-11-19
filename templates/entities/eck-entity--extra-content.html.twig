@@ -1,7 +1,7 @@
 {%
 	set classes = [
 		'entity',
-		'entity__' ~ entity['#extra_content'].type.value.0['target_id']|clean_class,
+		'entity__' ~ bundle|clean_class,
 		'clearfix'
 	]
 %}
@@ -10,9 +10,7 @@
 
 	{% block content %}
 
-		{% if not entity.field_display_title.0['#markup'] == null %}
-			<h2>{{ entity.title }}</h2>
-		{% endif %}
+		{% include '@pippip/partials/content-toolkit-title.html.twig' %}
 
 		{{ entity }}
 

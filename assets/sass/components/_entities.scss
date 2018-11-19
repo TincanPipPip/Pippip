@@ -1,0 +1,86 @@
+.entity {
+	margin: $bump * 1.5 0;
+
+	&__view {
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+
+	img {
+		width: 100%;
+		height: auto;
+	}
+
+	.image {
+		position: relative;
+	}
+
+	&__body {
+		margin-top: 0;
+	}
+
+	&__quote {
+		blockquote {
+			@include font-title;
+			border-bottom: $bump/2 solid $red-lt;
+			margin: 0;
+			padding: 0 0 $bump/2;
+			font-size: 42px;
+			line-height: 52px;
+
+			@include media("<sm") {
+				font-size: 25px;
+				line-height: 35px;
+			}
+
+			p {
+				margin-bottom: 0;
+			}
+
+			cite {
+				@include font-body;
+				font-style: normal;
+				text-transform: none;
+			}
+		}
+	}
+
+	&__gallery {
+		a {
+			display: block;
+			opacity: 0.5;
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+
+	&__linked-logos {
+		.logos {
+			display: flex;
+		}
+
+		a {
+			display: block;
+			margin-right: $bump/2;
+
+			&:hover {
+				opacity: 0.7;
+			}
+		}
+
+		img {
+			width: auto;
+			height: 80px;
+			vertical-align: top;
+		}
+	}
+
+	&__view {
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}

@@ -42,3 +42,12 @@ function pippip_preprocess_webform(&$vars){
   $wf = \Drupal\webform\Entity\Webform::load($wfid);
   $vars["title"] = $wf->label();
 }
+
+/**
+ * Hook_theme_suggestions_field_alter()
+ *
+ * Add field level display mode theme override
+ */
+function pippip_theme_suggestions_field_alter(&$suggestions, $variables) {
+  $suggestions[] = 'field__node__' . $variables['element']['#field_name'] . '__' . $variables['element']['#bundle'] . '__' . $variables['element']['#view_mode'];
+}
