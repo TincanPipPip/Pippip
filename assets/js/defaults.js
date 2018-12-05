@@ -3,6 +3,7 @@ import Choices from "choices.js";
 import SmoothScroll from "smooth-scroll";
 import VanillaModal from "vanilla-modal";
 //import Flickity from "flickity";
+//require('flickity-imagesloaded');
 
 /*
         Image galleries
