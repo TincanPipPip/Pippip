@@ -48,7 +48,7 @@ gulp.task("js", function() {
 			plumber(function(error) {
 				// Output any errors without breaking stream
 				gutil.log(error.message);
-				this.emit("end");
+				//this.emit("end");
 			})
 		)
 		.pipe(

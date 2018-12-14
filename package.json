@@ -13,11 +13,10 @@
 		"baguettebox.js": "^1.11.0",
 		"choices.js": "^3.0.4",
 		"flickity": "^2.1.2",
-		"smooth-scroll": "^14.2.1",
-		"vanilla-modal": "^1.6.5"
+		"vanilla-modal": "^1.6.5",
+		"zenscroll": "^4.0.2"
 	},
 	"devDependencies": {
-		"animate-sass": "^0.8.2",
 		"babel-core": "^6.26.3",
 		"babel-preset-env": "^1.7.0",
 		"babelify": "^8.0.0",
@@ -34,12 +33,19 @@
 		"gulp-uglify": "^3.0.1",
 		"gulp-util": "^3.0.8",
 		"reflex-grid": "^2.0.3",
-		"tap": "^12.0.1",
 		"vinyl-buffer": "^1.0.1"
 	},
 	"babel": {
-		"presets": [
-			"env"
-		]
-	}
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "ie": "11"
+          },
+          "useBuiltIns": true
+        }
+      ]
+    ]
+  }
 }

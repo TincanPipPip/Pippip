@@ -1,8 +1,9 @@
 import baguetteBox from "baguettebox.js";
 import Choices from "choices.js";
-import SmoothScroll from "smooth-scroll";
 import VanillaModal from "vanilla-modal";
+import zenscroll from 'zenscroll';
 //import Flickity from "flickity";
+//require('flickity-imagesloaded');
 
 /*
         Image galleries
@@ -59,20 +60,6 @@ if (document.querySelectorAll("select").length > 0) {
         });
     */
 
-/*
-        Achor scroll
-        url: https://www.npmjs.com/package/smooth-scroll
-        -----------------------------------------------
-    
-        Usage:
-        <a href="#target-id" class="scroll"></a>
-    */
-if (document.querySelectorAll("a.scroll")) {
-    const scroll = new SmoothScroll("a.scroll", {
-        updateURL: false,
-        popstate: false
-    });
-}
 
 /*
         Modal links
@@ -108,3 +95,14 @@ for (let i = 0, linksLength = links.length; i < linksLength; i++) {
         links[i].target = "_blank";
     }
 }
+
+// LazyLoad
+(function(w, d){
+    const b = d.getElementsByTagName('body')[0];
+    const s = d.createElement("script"); 
+    const v = !("IntersectionObserver" in w) ? "8.16.0" : "10.17.0";
+    s.async = true;
+    s.src = "https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/" + v + "/lazyload.min.js";
+    w.lazyLoadOptions = {/*elements_selector: ".lazy"*/};
+    b.appendChild(s);
+}(window, document));
