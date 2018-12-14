@@ -4,43 +4,43 @@
 
 // Reset <li> elements
 @mixin li-reset {
-	list-style:none; 
-	margin:0; 
-	padding:0;
-	
-	li {
-		list-style:none; 
-		margin:0; 
-		padding:0;
-	}
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
 }
 
 // Remove text from elements
 @mixin rm-text {
-	text-align:left;
-	text-indent:-9999px;
-	*font-size:0;
-	*line-height:0px;
+  text-align: left;
+  text-indent: -9999px;
+  *font-size: 0;
+  *line-height: 0px;
 }
 
 // Remove li bottom margin
 @mixin li-margin($columns, $marginBottom) {
-	&:nth-last-child(-n + #{$columns}):nth-child(#{$columns}n + 1),
-	&:nth-last-child(-n + #{$columns}):nth-child(#{$columns}n + 1) ~ li {
-		margin-bottom:$marginBottom;
-	}
+  &:nth-last-child(-n + #{$columns}):nth-child(#{$columns}n + 1),
+  &:nth-last-child(-n + #{$columns}):nth-child(#{$columns}n + 1) ~ li {
+    margin-bottom: $marginBottom;
+  }
 }
 
 // Centered background images
 @mixin bg-img {
-	background-position:center center;
-	background-repeat:no-repeat;
-	background-size:contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 // IE 9+ only
 @mixin ie($property, $value) {
-	@media screen and (min-width:0\0) and (min-resolution:+72dpi) {
-		#{$property}: #{$value};
-	}
+  @media screen and (min-width: 0\0) and (min-resolution: +72dpi) {
+    #{$property}: #{$value};
+  }
 }

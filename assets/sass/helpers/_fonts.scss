@@ -3,14 +3,14 @@
 // @font-face blah here...
 
 @mixin font-body {
-	font-family:arial, sans-serif;
-	font-size:16px;
+  font-family: arial, sans-serif;
+  font-size: 16px;
 }
 
 @mixin font-bold {
-	font-weight:normal;
+  font-weight: normal;
 }
 
 @mixin font-title {
-	font-weight:400;
+  font-weight: 400;
 }
