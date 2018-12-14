@@ -12,7 +12,6 @@ regions:
   nav: Navigation
   admin: Admin
   content: Content
-  emergency: "Emergency message"
   highlighted: Highlighted
   help: Help
   footer: Footer
