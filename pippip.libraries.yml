@@ -6,6 +6,6 @@ global:
       dist/css/global.css: {}
       dist/css/print.css: { media: print }
   js:
-    https://cdn.polyfill.io/v2/polyfill.min.js: { type: external }
+    https://cdn.polyfill.io/v2/polyfill.js: { type: external }
     dist/js/defaults.js: {}
     dist/js/global.js: {}
