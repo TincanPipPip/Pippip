@@ -4,7 +4,6 @@
 
 @import "base/normalize";
 @import "../../node_modules/reflex-grid/scss/reflex.scss";
-@import "../../node_modules/animate-sass/animate";
 
 @import "helpers/mediaq";
 @import "helpers/mixins";
@@ -18,17 +17,15 @@
 @import "vendor/modal";
 
 @import "base/defaults";
-
-/*
-    Uncomment the following based on what version of Drupal you're using
-*/
-//@import "base/drupal7";
-//@import "base/drupal8";
+@import "base/drupal8";
 
 @import "layout/header";
 @import "layout/style";
 @import "layout/footer";
 
 @import "components/nav";
+@import "components/search";
+@import "components/entities";
+@import "components/emmsg";
 
 @import "pages/front";
