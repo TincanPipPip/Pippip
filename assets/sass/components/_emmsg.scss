@@ -48,6 +48,8 @@
     position: absolute;
     top: $bump/2;
     right: $bump/2;
+    height: $bump;
+    width: $bump;
 
     .svg {
       fill: #fff;
