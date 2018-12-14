@@ -9,3 +9,8 @@ global:
     https://cdn.polyfill.io/v2/polyfill.js: { type: external }
     dist/js/defaults.js: {}
     dist/js/global.js: {}
+
+emmsg:
+  version: 1.x
+  js:
+    dist/js/emmsg.js: {}

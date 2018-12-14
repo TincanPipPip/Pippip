@@ -1,51 +1,52 @@
 {
-	"name": "pippip",
-	"version": "1.0.0",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/TincanPipPip/Pippip-v2"
-	},
-	"description": "Tincan base theme",
-	"main": "gulpfile.js",
-	"author": "Harry Edwards",
-	"license": "ISC",
-	"dependencies": {
-		"baguettebox.js": "^1.11.0",
-		"choices.js": "^3.0.4",
-		"flickity": "^2.1.2",
-		"vanilla-modal": "^1.6.5",
-		"zenscroll": "^4.0.2"
-	},
-	"devDependencies": {
-		"babel-core": "^6.26.3",
-		"babel-preset-env": "^1.7.0",
-		"babelify": "^8.0.0",
-		"browser-sync": "^2.26.3",
-		"browserify": "^16.2.3",
-		"gulp": "^3.9.1",
-		"gulp-autoprefixer": "^6.0.0",
-		"gulp-eslint": "^5.0.0",
-		"gulp-imagemin": "^4.1.0",
-		"gulp-plumber": "^1.2.0",
-		"gulp-sass": "^4.0.2",
-		"gulp-sourcemaps": "^2.6.4",
-		"gulp-tap": "^1.0.1",
-		"gulp-uglify": "^3.0.1",
-		"gulp-util": "^3.0.8",
-		"reflex-grid": "^2.0.3",
-		"vinyl-buffer": "^1.0.1"
-	},
-	"babel": {
-    "presets": [
-      [
-        "env",
-        {
-          "targets": {
-            "ie": "11"
-          },
-          "useBuiltIns": true
-        }
-      ]
-    ]
-  }
+		"name": "pippip",
+		"version": "1.0.0",
+		"repository": {
+				"type": "git",
+				"url": "https://github.com/TincanPipPip/Pippip-v2"
+		},
+		"description": "Tincan base theme",
+		"main": "gulpfile.js",
+		"author": "Harry Edwards",
+		"license": "ISC",
+		"dependencies": {
+				"baguettebox.js": "^1.11.0",
+				"choices.js": "^3.0.4",
+				"flickity": "^2.1.2",
+				"js-cookie": "^2.2.0",
+				"vanilla-modal": "^1.6.5",
+				"zenscroll": "^4.0.2"
+		},
+		"devDependencies": {
+				"babel-core": "^6.26.3",
+				"babel-preset-env": "^1.7.0",
+				"babelify": "^8.0.0",
+				"browser-sync": "^2.26.3",
+				"browserify": "^16.2.3",
+				"gulp": "^3.9.1",
+				"gulp-autoprefixer": "^6.0.0",
+				"gulp-eslint": "^5.0.0",
+				"gulp-imagemin": "^4.1.0",
+				"gulp-plumber": "^1.2.0",
+				"gulp-sass": "^4.0.2",
+				"gulp-sourcemaps": "^2.6.4",
+				"gulp-tap": "^1.0.1",
+				"gulp-uglify": "^3.0.1",
+				"gulp-util": "^3.0.8",
+				"reflex-grid": "^2.0.3",
+				"vinyl-buffer": "^1.0.1"
+		},
+		"babel": {
+				"presets": [
+						[
+								"env",
+								{
+										"targets": {
+												"ie": "11"
+										},
+										"useBuiltIns": true
+								}
+						]
+				]
+		}
 }
