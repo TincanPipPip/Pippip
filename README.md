@@ -81,7 +81,6 @@ Pippip v2 is [SASS](https://sass-lang.com) based.
 
   - `./assets/sass/base/normalize` - basic reset css
   - `../../node_modules/reflex-grid/scss/reflex.scss` - grid system
-  - `../../node_modules/animate-sass/animate` - animate.css ([See note](#animate.css-note))
   - `./assets/sass/helpers/mediaq` - media query breakpoints
   - `./assets/sass/helpers/mixins` - sitewide mixins
   - `./assets/sass/helpers/vars` - sitewide variables
@@ -97,10 +96,6 @@ Pippip v2 is [SASS](https://sass-lang.com) based.
   - `./assets/sass/components/*` - specific components (e.g. `_nav.scss`)
   - `./assets/sass/pages/*` - page/CT specific (e.g. `_front.scss`)
 
-  ##### Animate.css note
-
-  By default the animate.css library doesn't import any css, you must enable the animations you require. [See docs](https://github.com/tgdev/animate-sass#animation-module-loading) for more info.
-
 #### Grid
 
 Pippip utilises [Reflex grid](http://reflexgrid.com/docs/) for grid layouts. Reflex grid is a lightweight flexbox based mobile-first grid system.
@@ -115,6 +110,7 @@ Pippip v2 is ES6 based (rather than jQuery) by default, and gets converted to ES
 
 - `assets/js/defaults.js` contains all the default plugins
 - `assets/js/global.js` is a blank file for global JS
+- `assets/js/emmsg.js` contains emergency message js
 
 #### Included plugins
 
