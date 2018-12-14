@@ -13,14 +13,8 @@
 		"baguettebox.js": "^1.11.0",
 		"choices.js": "^3.0.4",
 		"flickity": "^2.1.2",
-<<<<<<< HEAD
 		"vanilla-modal": "^1.6.5",
 		"zenscroll": "^4.0.2"
-=======
-    "flickity-imagesloaded": "^2.0.0",
-		"smooth-scroll": "^14.2.1",
-		"vanilla-modal": "^1.6.5"
->>>>>>> b565a34ad57cf0c69a3db905102aada5ddcb55f7
 	},
 	"devDependencies": {
 		"babel-core": "^6.26.3",
