@@ -86,13 +86,7 @@
 
 	{% block content %}
 				
-		{{ title_prefix }}
-			<h1>{{ node.title.value }}</h1>
-		{{ title_suffix }}
-
-		<div{{ content_attributes }}>
-			{{ content }}
-		</div>
+		{% include '@pippip/partials/default.html.twig' %}
 
 	{% endblock %}
 

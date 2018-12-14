@@ -1,0 +1,9 @@
+{% include '@pippip/partials/banner-image.html.twig' %}
+
+{{ title_prefix }}
+  <h1>{{ node.title.value }}</h1>
+{{ title_suffix }}
+
+{% if content.body|render %}
+  {{ content.body}}
+{% endif %}

@@ -8,11 +8,7 @@
 
 	{% else %}
 
-		{{ title_prefix }}
-			<h1>{{ node.title.value }}</h1>
-		{{ title_suffix }}
-
-		{{ content }}
+		{% include '@pippip/partials/default.html.twig' %}
 
 	{% endif %}
 		
