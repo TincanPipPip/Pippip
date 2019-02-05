@@ -14,7 +14,6 @@
 @import "../../node_modules/baguettebox.js/src/baguetteBox";
 @import "../../node_modules/choices.js/assets/styles/scss/choices";
 //@import "../../node_modules/flickity/css/flickity.css";
-@import "vendor/modal";
 
 @import "base/defaults";
 @import "base/drupal8";
@@ -27,5 +26,9 @@
 @import "components/search";
 @import "components/entities";
 @import "components/emmsg";
+@import "components/forms";
+@import "components/animations";
 
 @import "pages/front";
+
+@import "vendor/modal";

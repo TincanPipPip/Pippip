@@ -29,7 +29,12 @@ h4,
 .h4,
 h5,
 .h5,
+<<<<<<< HEAD
 h6 {
+=======
+h6,
+.h6 {
+>>>>>>> master
   @include font-title;
   margin: 0 0 $bump/2;
 }
@@ -118,6 +123,7 @@ img {
   max-height: 150px;
 }
 
+<<<<<<< HEAD
 // Forms
 input,
 input[type="text"],
@@ -170,6 +176,8 @@ label {
   color: inherit;
 }
 
+=======
+>>>>>>> master
 // UL cols
 .listing {
   @include li-reset;

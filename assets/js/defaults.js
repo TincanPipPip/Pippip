@@ -1,7 +1,8 @@
 import baguetteBox from "baguettebox.js";
 import Choices from "choices.js";
-import VanillaModal from "vanilla-modal";
+import MicroModal from 'micromodal';
 import zenscroll from 'zenscroll';
+import LazyLoad from "vanilla-lazyload";
 //import Flickity from "flickity";
 //require('flickity-imagesloaded');
 
@@ -62,18 +63,40 @@ if (document.querySelectorAll("select").length > 0) {
 
 
 /*
-        Modal links
-        url: https://www.npmjs.com/package/vanilla-modal
-        -----------------------------------------------
-    
-        Usage:
-        <a href="#target-id" data-modal-open></a>
-    
-        <div id="target-id" data-modal-content class="modal-content"></div>
+    Modals
+    url: https://micromodal.now.sh/
+    -----------------------------------------------
 
-        Note: If not using, remove @import "modules/modal"; from `assets/sass/global.scss`
-    */
-const modal = new VanillaModal({ clickOutside: true, closeKeys: [27] });
+    Usage:
+    <a href="#" data-micromodal-trigger="modalID" title="Open "></a>
+
+    <div id="modalID" class="modal" aria-hidden="true">
+        <div tabindex="-1" data-micromodal-close>
+            <div role="dialog" aria-modal="true">
+                <a href="#close" aria-label="Close modal" class="modal-close">close</a>  
+                ** content **
+            </div>
+        </div>
+    </div>
+*/
+
+MicroModal.init();
+
+// Fake close buttons because fuck IE
+const closeBtns = document.querySelectorAll('a.modal-close');
+
+function closeModal(thisBtn){
+    thisBtn.addEventListener('click', function(e) {
+        const thisModal = document.querySelectorAll('div.modal.is-open');
+        
+        thisModal[0].classList.remove('is-open');
+        thisModal[0].setAttribute('aria-hidden',true);
+    
+        e.preventDefault();
+    });
+}
+
+closeBtns.forEach(thisBtn => closeModal(thisBtn));
 
 /*
         Menu burger
@@ -97,12 +120,4 @@ for (let i = 0, linksLength = links.length; i < linksLength; i++) {
 }
 
 // LazyLoad
-(function(w, d){
-    const b = d.getElementsByTagName('body')[0];
-    const s = d.createElement("script"); 
-    const v = !("IntersectionObserver" in w) ? "8.16.0" : "10.17.0";
-    s.async = true;
-    s.src = "https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/" + v + "/lazyload.min.js";
-    w.lazyLoadOptions = {/*elements_selector: ".lazy"*/};
-    b.appendChild(s);
-}(window, document));
+const myLazyLoad = new LazyLoad();

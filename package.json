@@ -13,9 +13,15 @@
 				"baguettebox.js": "^1.11.0",
 				"choices.js": "^3.0.4",
 				"flickity": "^2.1.2",
+<<<<<<< HEAD
 				"js-cookie": "^2.2.0",
 				"vanilla-modal": "^1.6.5",
 				"zenscroll": "^4.0.2"
+=======
+				"zenscroll": "^4.0.2",
+				"micromodal": "^0.3.2",
+				"vanilla-lazyload": "^8.17.0"
+>>>>>>> master
 		},
 		"devDependencies": {
 				"babel-core": "^6.26.3",
