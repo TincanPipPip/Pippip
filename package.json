@@ -2,8 +2,8 @@
 	"name": "pippip",
 	"version": "1.0.0",
 	"repository": {
-			"type": "git",
-			"url": "https://github.com/TincanPipPip/Pippip-v2"
+		"type": "git",
+		"url": "https://github.com/TincanPipPip/Pippip-v2"
 	},
 	"description": "Tincan base theme",
 	"main": "gulpfile.js",
