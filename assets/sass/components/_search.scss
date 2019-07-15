@@ -1,0 +1,27 @@
+#search-form {
+	display: none;
+	visibility: hidden;
+}
+
+.search-results-wrapper {
+	h2 {
+		display: none;
+	}
+
+	.result__title {
+		margin-bottom: 0;
+	}
+}
+
+.search-results {
+	margin-bottom: $bump * 2;
+
+	ol {
+		@include li-reset;
+
+		li {
+			position: relative;
+			margin-bottom: $bump;
+		}
+	}
+}

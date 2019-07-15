@@ -7,6 +7,10 @@
   max-width: 1720px;
 }
 
+.container-full > .grid {
+  max-width: none;
+}
+
 // Matchelement heights
 .matchheight > * {
   height: 100%;
@@ -32,7 +36,7 @@ h5,
 h6,
 .h6 {
   @include font-title;
-  margin: 0 0 0.5em;
+  margin: 0 0 $bump/2;
 }
 
 p {
@@ -59,6 +63,11 @@ a {
   text-decoration: none;
   transition: all 0.2s $easing;
 
+  &:hover {
+    color: $text;
+    text-decoration: underline;
+  }
+
   &.no-click {
     pointer-events: none;
   }
@@ -68,23 +77,13 @@ img {
   -webkit-backface-visibility: hidden;
 }
 
+.svg {
+  transition: all 0.2s $easing;
+}
+
 .hidden {
   display: none !important;
   visibility: hidden !important;
-}
-
-.clearfix {
-  display: block;
-  clear: both;
-
-  &:before,
-  &:after {
-    content: " ";
-    display: table;
-  }
-  &:after {
-    clear: both;
-  }
 }
 
 // Keep video ratio for fluid widths
