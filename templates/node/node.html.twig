@@ -77,8 +77,7 @@
 	set classes = [
 		'node',
 		'node__' ~ node.bundle|clean_class,
-		view_mode ? 'node--' ~ view_mode|clean_class,
-		'clearfix',
+		view_mode ? 'node--' ~ view_mode|clean_class
 	]
 %}
 
@@ -86,7 +85,15 @@
 
 	{% block content %}
 				
-		{% include '@pippip/partials/default.html.twig' %}
+		{% if view_mode == "teaser" %}
+
+			{% include '@pippip/partials/teaser.html.twig' %}
+
+		{% else %}
+
+			{% include '@pippip/partials/default.html.twig' %}
+
+		{% endif %}
 
 	{% endblock %}
 

@@ -4,12 +4,8 @@
 
 	{% include '@pippip/partials/content-toolkit-title.html.twig' %}
 
-	<blockquote>
-		{{ content.field_quote }}
-
-		{% if content.field_author %}
-			<cite>{{ content.field_author }}</cite>
-		{% endif %}
-	</blockquote>
+	<div class="js-accordion">
+		{{ content.field_rows }}
+	</div>
 
 {% endblock %}

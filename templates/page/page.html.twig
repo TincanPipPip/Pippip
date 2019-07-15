@@ -55,31 +55,7 @@
 		{{ page.emergency }}
 	{% endif %}
 
-	{% if page.admin or page.help or page.highlighted %}
-		<div class="admin-functions grid justify-center">
-			<div class="col-12">
-
-				{% if page.admin %}
-					<div class="admin-functions__admin">
-						{{ page.admin }}
-					</div>
-				{% endif %}
-
-				{% if page.help %}
-					<div class="admin-functions__help">
-						{{ page.help }}
-					</div>
-				{% endif %}
-
-				{% if page.highlighted %}
-					<div class="admin-functions__highlighted">
-						{{ page.highlighted }}
-					</div>
-				{% endif %}
-
-			</div>
-		</div>
-	{% endif %}
+	{% include '@pippip/partials/admin-tabs.html.twig' %}
 
 	<div class="visually-hidden"><a id="main-content" tabindex="-1"></a></div>
 
@@ -87,7 +63,7 @@
 		{{ page.content }}
 	{% endblock %}
 
-	<footer class="footer clearfix">
+	<footer class="footer">
 		{{ page.footer }}
 
 		{{ drupal_menu('footer') }}
@@ -100,4 +76,4 @@
 
 	Note: Replace xxx with correct uuid before uncommenting
 #}
-{# {{ drupal_block('block_content:xxx') }} #}
+{{ drupal_block('block_content:de181064-8533-4f62-8886-c3934600206d') }}

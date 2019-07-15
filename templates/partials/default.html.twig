@@ -5,5 +5,11 @@
 {{ title_suffix }}
 
 {% if content.body|render %}
-  {{ content.body}}
+  <div class="entity entity__body">
+    {{ content.body}}
+  </div>
+{% endif %}
+
+{% if content.field_content|render %}
+  {{ content.field_content}}
 {% endif %}
