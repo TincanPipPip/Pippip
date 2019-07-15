@@ -5,6 +5,7 @@ import zenscroll from 'zenscroll';
 import LazyLoad from "vanilla-lazyload";
 //import Flickity from "flickity";
 //require('flickity-imagesloaded');
+import Accordions from 'van11y-accessible-accordion-aria';
 
 /*
         Image galleries
@@ -121,3 +122,10 @@ for (let i = 0, linksLength = links.length; i < linksLength; i++) {
 
 // LazyLoad
 const myLazyLoad = new LazyLoad();
+
+// Accordions
+const accordions = document.querySelectorAll('.js-accordion');
+
+if (accordions.length > 0){
+    Accordions.attach(accordions);
+}

@@ -7,6 +7,10 @@
   max-width: 1720px;
 }
 
+.container-full > .grid {
+  max-width: none;
+}
+
 // Matchelement heights
 .matchheight > * {
   height: 100%;
@@ -80,20 +84,6 @@ img {
 .hidden {
   display: none !important;
   visibility: hidden !important;
-}
-
-.clearfix {
-  display: block;
-  clear: both;
-
-  &:before,
-  &:after {
-    content: " ";
-    display: table;
-  }
-  &:after {
-    clear: both;
-  }
 }
 
 // Keep video ratio for fluid widths
