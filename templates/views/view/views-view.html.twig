@@ -7,48 +7,31 @@
   ]
 %}
 <div{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {{ title }}
+  {{ title_suffix }}
 
-  <div class="grid justify-space-between">
-    <div class="col-3">
+  {% if header %}
+    <header>
+      {{ header }}
+    </header>
+  {% endif %}
 
-      {% if footer %}
-        <div class="view__{{ view.element['#name'] }}__footer entity__view__header">
-          {{ footer }}
-        </div>
-      {% endif %}
-      
-      {{ exposed }}
+  {{ exposed }}
+  {{ attachment_before }}
 
-    </div>
-    <div class="col-8">
-      
-      {{ title_prefix }}
-      {{ title }}
-      {{ title_suffix }}
+  {{ rows }}
+  {{ empty }}
+  {{ pager }}
 
-      {% if header %}
-        <div class="view__{{ view.element['#name'] }}__header entity__view__header">
-          {{ header }}
+  {{ attachment_after }}
+  {{ more }}
 
-          <div class="custom-sort">
-            <label>Sort by</label>
-
-            <select id="custom-sort"></select>
-          </div>
-        </div>
-      {% endif %}
-
-      {{ attachment_before }}
-
-      {{ rows }}
-      {{ empty }}
-      {{ pager }}
-
-      {{ attachment_after }}
-      {{ more }}
-
-    </div>
-  </div>
+  {% if footer %}
+    <footer>
+      {{ footer }}
+    </footer>
+  {% endif %}
 
   {{ feed_icons }}
 </div>
