@@ -1,11 +1,14 @@
-// --------------------------------
-//					      VARIABLES
-// --------------------------------
+/**
+ * ----------------------
+ * Un.titled
+ * Config - Vars
+ * ----------------------
+ */
 
 $text: #000000;
 $bg: #fff;
 
-// padding used in foundation
+// general purpose variable, should really be renamed but I don't know wtf to call it
 $bump: 30px;
 
 $easing: cubic-bezier(0.3, 0.65, 0.72, 0.63);

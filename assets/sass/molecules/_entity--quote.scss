@@ -1,0 +1,32 @@
+/**
+ * ----------------------
+ * Un.titled
+ * Molecules - Quotes
+ * ----------------------
+ */
+
+&__quote {
+  blockquote {
+    @include font-title;
+    border-bottom: $bump/2 solid $text;
+    margin: 0;
+    padding: 0 0 $bump/2;
+    font-size: 42px;
+    line-height: 52px;
+
+    @include media("<sm") {
+      font-size: 25px;
+      line-height: 35px;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+
+    cite {
+      @include font-body;
+      font-style: normal;
+      text-transform: none;
+    }
+  }
+}

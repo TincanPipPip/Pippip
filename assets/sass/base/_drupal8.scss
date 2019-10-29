@@ -1,3 +1,10 @@
+/**
+ * ----------------------
+ * Un.titled
+ * Base - Drupal 8 specific
+ * ----------------------
+ */
+
 // Pagination
 .pager {
   @include li-reset;
@@ -42,15 +49,6 @@
     li {
       margin-right: $bump;
       display: inline-block;
-
-      a {
-        @include btn;
-
-        &.active,
-        &:hover {
-          @include btn-hover;
-        }
-      }
     }
   }
 }

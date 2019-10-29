@@ -1,21 +1,12 @@
-<a 
-  href="{{ url }}"
-  class="teaser"
-  title="
-    {% if type == 'homepage' %}
-      Back to homepage
-    {% else %}
-      Open {{ node.title.value }}
-    {% endif %}
-  ">
+<a href="{{ url }}" class="m-teaser" title="Open {{ node.title.value }}">
 
   {% if content.field_image|render %}
-    <div class="teaser__thumb">
+    <div class="m-teaser__thumb">
       {{ content.field_image}}
     </div>
   {% endif %}
 
-  <div class="teaser__content">
+  <div class="m-teaser__content">
     <h3>{{ node.title.value }}</h3>
 
     {% if content.body %}

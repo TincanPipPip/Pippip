@@ -71,13 +71,13 @@ function pippip_theme_suggestions_block_alter(array &$suggestions, array $variab
  */
 function pippip_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   $form['actions']['submit']['#attributes']['data-twig-suggestion'] = 'button';
-  $form['actions']['submit']['#attributes']['class'][] = 'btn';
+  $form['actions']['submit']['#attributes']['class'][] = 'a-btn';
   if (isset($form['actions']['submit']['#value'])) {
     $form['actions']['submit']['#attributes']['value'][] = $form['actions']['submit']['#value'];
   }
 
   $form['actions']['reset']['#attributes']['data-twig-suggestion'] = 'button';
-  $form['actions']['reset']['#attributes']['class'][] = 'btn';
+  $form['actions']['reset']['#attributes']['class'][] = 'a-btn';
   if (isset($form['actions']['reset']) && isset($form['actions']['reset']['#value'])) {    
     $form['actions']['reset']['#attributes']['value'][] = $form['actions']['reset']['#value'];
   }

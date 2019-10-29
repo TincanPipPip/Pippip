@@ -15,7 +15,6 @@ regions:
   highlighted: Highlighted
   help: Help
   footer: Footer
-  hidden: Hidden
 
 libraries-override:
   classy/base: false

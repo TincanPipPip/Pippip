@@ -75,26 +75,26 @@
 
 {%
 	set classes = [
-		'node',
-		'node__' ~ node.bundle|clean_class,
-		view_mode ? 'node--' ~ view_mode|clean_class
+		'o-node',
+		'o-node__' ~ node.bundle|clean_class,
+		view_mode ? 'o-node--' ~ view_mode|clean_class
 	]
 %}
 
-<div{{ attributes.addClass(classes) }}>
+<div{{attributes.addClass(classes)}}>
 
-	{% block content %}
-				
-		{% if view_mode == "teaser" %}
+  {% block content %}
 
-			{% include '@pippip/partials/teaser.html.twig' %}
+    {% if view_mode == "teaser" %}
 
-		{% else %}
+      {% include '@pippip/partials/teaser.html.twig' %}
 
-			{% include '@pippip/partials/default.html.twig' %}
+    {% else %}
 
-		{% endif %}
+      {% include '@pippip/partials/default.html.twig' %}
 
-	{% endblock %}
+    {% endif %}
+
+  {% endblock %}
 
 </div>

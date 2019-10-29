@@ -1,12 +1,11 @@
 {%
   set classes = [
-    dom_id ? 'js-view-dom-id-' ~ dom_id,
     'view__' ~ view.element['#name'],
-    'entity',
-    'entity__view'
+    'm-entity',
+    'm-entity__view'
   ]
 %}
-<div{{ attributes.addClass(classes) }}>
+<div{{attributes.addClass(classes)}}>
   {{ title_prefix }}
   {{ title }}
   {{ title_suffix }}

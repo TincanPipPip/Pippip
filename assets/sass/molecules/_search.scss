@@ -1,27 +1,17 @@
 #search-form {
-	display: none;
-	visibility: hidden;
+  display: none;
+  visibility: hidden;
 }
 
-.search-results-wrapper {
-	h2 {
-		display: none;
-	}
+.m-search-results {
+  margin-bottom: $bump * 2;
 
-	.result__title {
-		margin-bottom: 0;
-	}
-}
+  ol {
+    @include li-reset;
 
-.search-results {
-	margin-bottom: $bump * 2;
-
-	ol {
-		@include li-reset;
-
-		li {
-			position: relative;
-			margin-bottom: $bump;
-		}
-	}
+    li {
+      position: relative;
+      margin-bottom: $bump;
+    }
+  }
 }

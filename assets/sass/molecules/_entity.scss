@@ -5,7 +5,7 @@
  * ----------------------
  */
 
-.entity {
+.m-entity {
   margin: $bump * 1.5 0;
 
   img {
@@ -13,133 +13,9 @@
     height: auto;
   }
 
-  .image {
-    position: relative;
-  }
-
   @import "entity--body";
-
-  &__quote {
-    blockquote {
-      @include font-title;
-      border-bottom: $bump/2 solid $text;
-      margin: 0;
-      padding: 0 0 $bump/2;
-      font-size: 42px;
-      line-height: 52px;
-
-      @include media("<sm") {
-        font-size: 25px;
-        line-height: 35px;
-      }
-
-      p {
-        margin-bottom: 0;
-      }
-
-      cite {
-        @include font-body;
-        font-style: normal;
-        text-transform: none;
-      }
-    }
-  }
-
-  &__gallery {
-    a {
-      display: block;
-      opacity: 1;
-
-      &:hover {
-        opacity: 0.7;
-      }
-    }
-  }
-
-  &__linked-logos {
-    .logos {
-      display: flex;
-      flex-wrap: wrap;
-    }
-
-    a {
-      display: block;
-      margin-right: $bump/2;
-
-      &:hover {
-        opacity: 0.7;
-      }
-    }
-
-    img {
-      width: auto;
-      height: 80px;
-      vertical-align: top;
-    }
-  }
-
-  &__view {
-    &:first-child {
-      margin-top: 0;
-    }
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-
-  &__accordion {
-    .accordion__header {
-      display: flex;
-      width: 100%;
-      border: 0;
-      background-color: transparent;
-      text-align-last: left;
-      justify-content: space-between;
-      padding: 0;
-    }
-
-    .js-accordion__panel {
-      display: none;
-    }
-
-    .accordion__panel {
-      display: block;
-      overflow: hidden;
-      opacity: 1;
-      transition: visibility 0s ease, max-height 0.2s ease, opacity 0.2s ease;
-      max-height: 100em;
-      visibility: visible;
-      transition-delay: 0s;
-
-      &[aria-hidden="true"] {
-        display: block;
-        max-height: 0;
-        opacity: 0;
-        visibility: hidden;
-        transition-delay: 0.2s, 0s, 0s;
-      }
-
-      p:last-child {
-        margin-bottom: $bump;
-      }
-    }
-
-    /* title opened */
-    [aria-expanded="true"]:after {
-      content: "-";
-    }
-    /* title closed */
-    [aria-expanded="false"]:after {
-      content: "+";
-    }
-
-    // /* title selected */
-    // [aria-selected="true"]:after {
-    //   content: " (sel)";
-    // }
-    // /* title non selected */
-    // [aria-selected="false"]:after {
-    //   content: " (unselc)";
-    // }
-  }
+  @import "entity--view";
+  @import "entity--quote";
+  @import "entity--accordion";
+  @import "entity--linked-logos";
 }
