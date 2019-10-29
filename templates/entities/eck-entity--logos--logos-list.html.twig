@@ -1,7 +1,8 @@
 <div class="logo-link">
 
   <a href="{{ content.field_logo_link }}" target="_blank" title="{{ content.title }}" class="img-link">
-    {{ content.field_logo }}
+    {% set logo = image_style(content.field_logo[0]['#item'].entity.fid.value, ['logo']) %}
+    <img data-src="{{ logo.logo }}" alt="{{ content.field_logo[0]['#item'].alt }}" class="lazy">
   </a>
 
 </div>

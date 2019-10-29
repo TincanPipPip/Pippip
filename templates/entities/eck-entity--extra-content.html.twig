@@ -5,14 +5,14 @@
 	]
 %}
 
-<section{{ attributes.addClass(classes) }}>
+<section{{attributes.addClass(classes)}}>
 
-	{% block content %}
+  {% block content %}
 
-		{% include '@pippip/partials/content-toolkit-title.html.twig' %}
+    {% include '@pippip/partials/components/content-toolkit-title.html.twig' %}
 
-		{{ content }}
+    {{ content }}
 
-	{% endblock %}
+  {% endblock %}
 
 </section>

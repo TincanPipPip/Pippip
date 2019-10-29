@@ -41,34 +41,32 @@
 #}
 <header id="js-header" class="header">
 
-	<a href="/" title="{{ drupal_config('system.site', 'name') }}" rel="home" class="header__logo">{% include '@pippip/partials/svg/logo.html.twig' %}</a>
+  <a href="/" title="{{ drupal_config('system.site', 'name') }}" rel="home" class="header__logo">{% include '@pippip/partials/svg/logo.html.twig' %}</a>
 
-	{{ page.nav }}
+  {{ page.nav }}
 
-	{{ page.header }}
+  {{ page.header }}
 
 </header>
 
 <div id="js-wrapper" class="wrapper">
 
-	{% if page.emergency %}
-		{{ page.emergency }}
-	{% endif %}
+  {% include '@pippip/partials/components/admin-tabs.html.twig' %}
 
-	{% include '@pippip/partials/admin-tabs.html.twig' %}
+  <div class="visually-hidden">
+    <a id="main-content" tabindex="-1"></a>
+  </div>
 
-	<div class="visually-hidden"><a id="main-content" tabindex="-1"></a></div>
+  {% block content %}
+    {{ page.content }}
+  {% endblock %}
 
-	{% block content %}
-		{{ page.content }}
-	{% endblock %}
+  <footer class="footer">
+    {{ page.footer }}
 
-	<footer class="footer">
-		{{ page.footer }}
+    {{ drupal_menu('footer') }}
+  </footer>
 
-		{{ drupal_menu('footer') }}
-	</footer>
-	
 </div>
 
 {# 

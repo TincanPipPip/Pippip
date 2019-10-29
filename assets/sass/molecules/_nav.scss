@@ -1,0 +1,14 @@
+// Menus
+.nav {
+  ul {
+    @include li-reset;
+
+    @include media("<=sm") {
+      display: none;
+    }
+  }
+
+  .nav-open & {
+    display: block;
+  }
+}

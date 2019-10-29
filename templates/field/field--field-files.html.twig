@@ -1,7 +1,7 @@
-<ul class="listing listing--one-col">
-	{% for item in items %}
-		<li>
-			{{ item.content }}
-		</li>
-	{% endfor %}
-</ul>
+<div class="grid">
+  {% for item in items %}
+    <div class="col-sm-12">
+      {{ item.content }}
+    </div>
+  {% endfor %}
+</div>

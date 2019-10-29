@@ -63,3 +63,22 @@ function pippip_theme_suggestions_block_alter(array &$suggestions, array $variab
     array_splice($suggestions, 1, 0, 'block__bundle__' . $variables['elements']['content']['#block_content']->bundle());
   }
 }
+
+/**
+ * @param $form
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ * @param $form_id
+ */
+function pippip_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $form['actions']['submit']['#attributes']['data-twig-suggestion'] = 'button';
+  $form['actions']['submit']['#attributes']['class'][] = 'btn';
+  if (isset($form['actions']['submit']['#value'])) {
+    $form['actions']['submit']['#attributes']['value'][] = $form['actions']['submit']['#value'];
+  }
+
+  $form['actions']['reset']['#attributes']['data-twig-suggestion'] = 'button';
+  $form['actions']['reset']['#attributes']['class'][] = 'btn';
+  if (isset($form['actions']['reset']) && isset($form['actions']['reset']['#value'])) {    
+    $form['actions']['reset']['#attributes']['value'][] = $form['actions']['reset']['#value'];
+  }
+}

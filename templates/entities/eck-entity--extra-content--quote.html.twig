@@ -2,14 +2,14 @@
 
 {% block content %}
 
-	{% include '@pippip/partials/content-toolkit-title.html.twig' %}
+  {% include '@pippip/partials/components/content-toolkit-title.html.twig' %}
 
-	<blockquote>
-		{{ content.field_quote }}
+  <blockquote>
+    {{ content.field_quote }}
 
-		{% if content.field_author %}
-			<cite>{{ content.field_author }}</cite>
-		{% endif %}
-	</blockquote>
+    {% if content.field_author %}
+      <cite>{{ content.field_author }}</cite>
+    {% endif %}
+  </blockquote>
 
 {% endblock %}

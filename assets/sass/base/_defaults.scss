@@ -1,6 +1,9 @@
-// --------------------------------
-//					       DEFAULTS
-// --------------------------------
+/**
+ * ----------------------
+ * Un.titled
+ * Base - defaults
+ * ----------------------
+ */
 
 // Grid default row width & gutter
 .grid {
@@ -9,68 +12,6 @@
 
 .container-full > .grid {
   max-width: none;
-}
-
-// Matchelement heights
-.matchheight > * {
-  height: 100%;
-}
-
-body,
-html {
-  @include font-body;
-  color: $text;
-}
-
-// Text & links
-h1,
-.h1,
-h2,
-.h2,
-h3,
-.h3,
-h4,
-.h4,
-h5,
-.h5,
-h6,
-.h6 {
-  @include font-title;
-  margin: 0 0 $bump/2;
-}
-
-p {
-  margin-top: 0;
-
-  &:last-child {
-    margin: 0;
-  }
-}
-
-strong {
-  @include font-bold;
-}
-
-em {
-  font-style: italic;
-}
-
-small {
-  font-size: 90%;
-}
-
-a {
-  text-decoration: none;
-  transition: all 0.2s $easing;
-
-  &:hover {
-    color: $text;
-    text-decoration: underline;
-  }
-
-  &.no-click {
-    pointer-events: none;
-  }
 }
 
 img {
@@ -107,111 +48,4 @@ img {
 .media-soundcloud-audio iframe {
   width: 100%;
   max-height: 150px;
-}
-
-// UL cols
-.listing {
-  @include li-reset;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  margin: 0 (-$bump/2);
-
-  @include media("<=sm") {
-    margin: 0 (-$bump/3);
-  }
-
-  @include media("<=xs") {
-    margin: 0;
-  }
-
-  & > li {
-    padding: $bump/2;
-
-    @include media("<=sm") {
-      padding: 0 $bump/3 $bump/1.5;
-    }
-
-    @include media("<=xs") {
-      padding: 0 0 $bump;
-    }
-  }
-
-  &--one-col {
-    & > li {
-      flex-basis: 100%;
-    }
-  }
-
-  &--two-col {
-    & > li {
-      flex-basis: 50%;
-      min-width: 50%;
-
-      @include media("<=xs") {
-        flex-basis: 100%;
-        min-width: 100%;
-      }
-    }
-  }
-
-  &--three-col {
-    & > li {
-      flex-basis: 33.3333%;
-      min-width: 33.3333%;
-
-      @include media("<=xs") {
-        flex-basis: 100%;
-        min-width: 100%;
-      }
-    }
-  }
-  &--four-col {
-    & > li {
-      flex-basis: 25%;
-      min-width: 25%;
-
-      @include media("<=sm") {
-        flex-basis: 50%;
-        min-width: 50%;
-      }
-
-      @include media("<=xs") {
-        flex-basis: 100%;
-        min-width: 100%;
-      }
-    }
-  }
-  &--five-col {
-    & > li {
-      flex-basis: 20%;
-      min-width: 20%;
-
-      @include media("<=sm") {
-        flex-basis: 33.3333%;
-        min-width: 33.3333%;
-      }
-
-      @include media("<=xs") {
-        flex-basis: 100%;
-        min-width: 100%;
-      }
-    }
-  }
-  &--six-col {
-    & > li {
-      flex-basis: 16.6666%;
-      max-width: 16.6666%;
-
-      @include media("<=sm") {
-        flex-basis: 33.3333%;
-        max-width: 33.3333%;
-      }
-
-      @include media("<=xs") {
-        flex-basis: 100%;
-        max-width: 100%;
-      }
-    }
-  }
 }

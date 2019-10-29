@@ -1,0 +1,77 @@
+/**
+ * ----------------------
+ * Un.titled
+ * Base - typography
+ * ----------------------
+ */
+
+// @font-face blah here...
+
+@mixin font-body {
+  font-family: arial, sans-serif;
+  font-size: 16px;
+}
+
+@mixin font-bold {
+  font-weight: normal;
+}
+
+@mixin font-title {
+  font-weight: 400;
+}
+
+body,
+html {
+  @include font-body;
+  color: $text;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  @include font-title;
+  margin: 0 0 $bump/2;
+}
+
+p {
+  margin-top: 0;
+
+  &:last-child {
+    margin: 0;
+  }
+}
+
+strong {
+  @include font-bold;
+}
+
+em {
+  font-style: italic;
+}
+
+small {
+  font-size: 90%;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.2s $easing;
+
+  &:hover {
+    color: $text;
+    text-decoration: underline;
+  }
+
+  &.no-click {
+    pointer-events: none;
+  }
+}
