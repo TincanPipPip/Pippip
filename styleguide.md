@@ -17,7 +17,7 @@
 
 ## Markup
 
-- Use [BEM](http://getbem.com) methodology
+- Use [ABEM](https://css-tricks.com/abem-useful-adaptation-bem/) methodology
 
 ## SASS
 
@@ -128,7 +128,7 @@ Use `0` instead of `none` to specify that a style has no border.
      background: green;
      font-weight: bold;
 
-     @include media("<=small") {
+     @include media('<=small') {
        font-weight: normal;
      }
      // ...
@@ -146,7 +146,7 @@ Use `0` instead of `none` to specify that a style has no border.
      font-weight: bold;
 
      &::before {
-       content: " ";
+       content: ' ';
      }
    }
    ```
@@ -162,7 +162,7 @@ Use `0` instead of `none` to specify that a style has no border.
      font-weight: bold;
 
      &::before {
-       content: " ";
+       content: ' ';
      }
 
      &__icon {
