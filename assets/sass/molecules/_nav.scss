@@ -1,9 +1,13 @@
-// Menus
+/**
+ * ----------------------
+ * Un.titled
+ * Molecules - Main nav
+ * ----------------------
+ */
+
 .m-nav {
   ul {
-    @include li-reset;
-
-    @include media("<=sm") {
+    @include media("<sm") {
       display: none;
     }
   }

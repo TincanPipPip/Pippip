@@ -49,7 +49,7 @@
     }
   }
 
-  @include media("<=sm") {
+  @include media("<sm") {
     display: block;
   }
 
