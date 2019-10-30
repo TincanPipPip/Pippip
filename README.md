@@ -81,7 +81,7 @@ Pippip v2 is ES6 based (rather than jQuery) by default, and gets converted to ES
 #### Included JS files
 
 - `assets/js/defaults.js` contains all the default plugins & global functions
-- `assets/js/global.js` is a blank file for global JS
+- `assets/js/global.js` is a blank file for global project specific JS
 - `assets/js/emmsg.js` contains emergency message js
 
 #### Included plugins
@@ -89,15 +89,15 @@ Pippip v2 is ES6 based (rather than jQuery) by default, and gets converted to ES
 Usage notes for each plugin can be found in `assets/js/defaults.js`
 
 - [BaugetteBox](https://www.npmjs.com/package/baguettebox.js)
-- Image lightbox
+  - Image lightbox
 - [Choices](https://www.npmjs.com/package/choices.js)
-- Better select elements
+  - Better select elements
 - [Flickity](https://www.npmjs.com/package/flickity)
-- Carousels
-- **Disabled by default** See notes in `./assets/js/defaults.js` for enabling
+  - Carousels
+  - **Disabled by default** See notes in `./assets/js/defaults.js` for enabling
 - [Zenscroll](https://github.com/zengabor/zenscroll)
-- Anchor scroll animation
+  - Anchor scroll animation
 - [VanillaModal](https://www.npmjs.com/package/vanilla-modal)
-- Custom modal overlays
+  - Custom modal overlays
 - [Van11y accessible accordion](https://github.com/nico3333fr/van11y-accessible-accordion-aria)
-- Accessible vanilla JS accordion
+  - Accessible vanilla JS accordion
