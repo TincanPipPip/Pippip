@@ -31,10 +31,9 @@ Pippip v3 is a Drupal 8 base theme, utilising Gulp, Browsersync, ES6 & SASS.
 1. Place all provided image assets in `./assets/img`
 1. Place all fonts in `./dist/fonts`
 1. From the root pippip folder:
-
-- Run `npm install`
-- Update `localUrl` in `gulpfile.js` with local site domain
-- Run `gulp` to start compiling & watching the files
+  * Run `npm install`
+  * Update `localUrl` in `gulpfile.js` with local site domain
+  * Run `gulp` to start compiling & watching the files
 
 ## Gulp
 
