@@ -7,9 +7,27 @@
   <blockquote>
     {{ content.field_quote }}
 
-    {% if content.field_author %}
-      <cite>{{ content.field_author }}</cite>
-    {% endif %}
+    <footer>
+      {% if content.field_rating|render %}
+        {% include '@pippip/partials/atoms/rating.html.twig' with {
+          content : {
+            rating : content.field_rating.0
+          }
+        } %}
+      {% endif %}
+
+      {% if content.field_author %}
+        <cite>
+          <span class="name">
+            {{ content.field_author }}
+          </span>
+          {% if content.field_quote_credit|render %}
+            -
+            {{ content.field_quote_credit}}
+          {% endif %}
+        </cite>
+      {% endif %}
+    </footer>
   </blockquote>
 
 {% endblock %}

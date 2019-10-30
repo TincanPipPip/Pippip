@@ -4,6 +4,12 @@
 
   {% include '@pippip/partials/atoms/content-toolkit-title.html.twig' %}
 
-  {{ content.field_image }}
+  <div class="m-entity__image-wrapper">
+
+    {{ content.field_image }}
+
+    {% include '@pippip/partials/atoms/image-credit.html.twig' %}
+
+  </div>
 
 {% endblock %}

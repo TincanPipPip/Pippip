@@ -17,8 +17,8 @@
 @import 'base/defaults';
 
 @import 'vendor/include-media';
-// @import "../../node_modules/baguettebox.js/src/baguetteBox";
-// @import "../../node_modules/choices.js/assets/styles/scss/choices";
+@import '../../node_modules/baguettebox.js/src/baguetteBox';
+@import '../../node_modules/choices.js/assets/styles/scss/choices';
 // @import "../../node_modules/flickity/css/flickity.css";
 
 @import 'templates/front';
@@ -33,6 +33,9 @@
 @import 'molecules/forms';
 @import 'molecules/nav';
 @import 'molecules/teasers';
+@import 'molecules/banner';
+@import 'molecules/linked-logos';
 
 @import 'atoms/nav-toggle';
 @import 'atoms/buttons';
+@import 'atoms/image-credit';

@@ -5,18 +5,37 @@
  * ----------------------
  */
 
+/**
+ * Config
+ */
+
+@mixin rating($stars) {
+  &:nth-child(-n + #{$stars}) {
+    path {
+      fill: $text;
+      stroke: $text;
+    }
+  }
+}
+
+/**
+ * Styles
+ */
+
 &__quote {
   blockquote {
     @include font-title;
-    border-bottom: $bump/2 solid $text;
     margin: 0;
     padding: 0 0 $bump/2;
-    font-size: 42px;
-    line-height: 52px;
 
-    @include media("<sm") {
+    @include media('<sm') {
       font-size: 25px;
       line-height: 35px;
+    }
+
+    footer {
+      display: flex;
+      align-items: center;
     }
 
     p {
@@ -26,7 +45,34 @@
     cite {
       @include font-body;
       font-style: normal;
-      text-transform: none;
+
+      .name {
+        @include font-bold;
+      }
+    }
+  }
+
+  .rating {
+    display: inline-flex;
+    margin-right: $bump/2;
+
+    &__star {
+      width: 24px;
+      height: 24px;
+      margin-right: 5px;
+      stroke: $text;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    @for $stars from 1 through 5 {
+      &--#{$stars} {
+        .rating__star {
+          @include rating(#{$stars});
+        }
+      }
     }
   }
 }

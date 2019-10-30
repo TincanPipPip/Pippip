@@ -1,16 +1,16 @@
-import baguetteBox from "baguettebox.js";
-import Choices from "choices.js";
-import zenscroll from "zenscroll";
-import LazyLoad from "vanilla-lazyload";
+import baguetteBox from 'baguettebox.js';
+import Choices from 'choices.js';
+import zenscroll from 'zenscroll';
+import LazyLoad from 'vanilla-lazyload';
 //import Flickity from "flickity";
 //require('flickity-imagesloaded');
-import Accordions from "van11y-accessible-accordion-aria";
+import Accordions from 'van11y-accessible-accordion-aria';
 
 // Global function to toggle states
-window.toggleState = function(el, on, off) {
+window.toggleState = function(el, dataname, on, off) {
   el.setAttribute(
-    "data-state",
-    el.getAttribute("data-state") === on ? off : on
+    `data-${dataname}`,
+    el.getAttribute(`data-${dataname}`) === on ? off : on
   );
 };
 
@@ -29,8 +29,8 @@ window.toggleState = function(el, on, off) {
         Note: If not using, remove @import "../../node_modules/baguettebox.js/src/baguetteBox"; from `assets/sass/global.scss`
     */
 
-if (document.querySelectorAll(".gallery")) {
-  baguetteBox.run(".gallery");
+if (document.querySelectorAll('.gallery')) {
+  baguetteBox.run('.gallery');
 }
 
 /*
@@ -43,8 +43,8 @@ if (document.querySelectorAll(".gallery")) {
 
         Note: If not using, remove @import "../../node_modules/choices.js/assets/styles/scss/choices"; from `assets/sass/global.scss`
     */
-if (document.querySelectorAll("select").length > 0) {
-  const selectElements = new Choices("select");
+if (document.querySelectorAll('select').length > 0) {
+  const selectElements = new Choices('select');
 }
 
 /*
@@ -72,11 +72,11 @@ if (document.querySelectorAll("select").length > 0) {
 /*
         Menu burger
     */
-const menuBurgerBtn = document.getElementById("js-navToggle");
+const menuBurgerBtn = document.querySelector('.a-nav-toggle');
 
 if (menuBurgerBtn) {
-  menuBurgerBtn.addEventListener("click", function(e) {
-    toggleState(document.body, "nav-open", "nav-closed");
+  menuBurgerBtn.addEventListener('click', function(e) {
+    toggleState(document.body, 'nav', 'open', 'closed');
   });
 }
 
@@ -87,7 +87,7 @@ const links = document.links;
 
 for (let i = 0, linksLength = links.length; i < linksLength; i++) {
   if (links[i].hostname != window.location.hostname) {
-    links[i].target = "_blank";
+    links[i].target = '_blank';
   }
 }
 

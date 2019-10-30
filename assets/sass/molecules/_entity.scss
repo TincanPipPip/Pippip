@@ -11,11 +11,13 @@
   img {
     width: 100%;
     height: auto;
+    display: block;
   }
 
-  @import "entity--body";
-  @import "entity--view";
-  @import "entity--quote";
-  @import "entity--accordion";
-  @import "entity--linked-logos";
+  @import 'entity--body';
+  @import 'entity--image';
+  @import 'entity--view';
+  @import 'entity--quote';
+  @import 'entity--accordion';
+  @import 'entity--gallery';
 }

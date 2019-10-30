@@ -5,14 +5,14 @@
  * ----------------------
  */
 
-.m-nav {
+.m-main-nav {
   ul {
-    @include media("<sm") {
+    @include media('<sm') {
       display: none;
     }
   }
 
-  [data-state="nav-open"] & {
+  [data-nav='open'] & {
     display: block;
   }
 }
