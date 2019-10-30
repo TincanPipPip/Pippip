@@ -34,6 +34,7 @@
     "gulp-tap": "^1.0.1",
     "gulp-uglify": "^3.0.1",
     "gulp-util": "^3.0.8",
+    "prettier": "^1.18.2",
     "reflex-grid": "^2.0.3",
     "vinyl-buffer": "^1.0.1"
   },
