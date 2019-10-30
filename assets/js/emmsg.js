@@ -1,19 +1,19 @@
-import Cookies from 'js-cookie';
+import Cookies from "js-cookie";
 
-const emmsg = document.getElementById('emmsg');
+const emergencyMessage = document.getElementById("emmsg");
 
-if (emmsg != null){
-  if (Cookies.get('hideemmsg')){
-    emmsg.classList.add('hidden');
+if (emergencyMessage != null) {
+  if (Cookies.get("hideemmsg")) {
+    emergencyMessage.setAttribute("data-state", "hidden");
   } else {
-    emmsg.classList.remove('hidden');
+    emergencyMessage.setAttribute("data-state", "visible");
   }
 
-  const btn = document.getElementById('emmsg-close');
+  const btn = document.getElementById("emmsg-close");
 
-  btn.addEventListener('click', function(e){
-    Cookies.set('hideemmsg', 'true', { expires: 30});
-    emmsg.classList.add('hidden');
+  btn.addEventListener("click", function(e) {
+    Cookies.set("hideemmsg", "true", { expires: 30 });
+    emergencyMessage.setAttribute("data-state", "hidden");
 
     e.preventDefault();
   });

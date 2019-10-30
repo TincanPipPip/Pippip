@@ -53,7 +53,7 @@
     display: block;
   }
 
-  .nav-open & {
+  [data-state="nav-open"] & {
     span {
       background-color: #fff;
 

@@ -6,6 +6,14 @@ import LazyLoad from "vanilla-lazyload";
 //require('flickity-imagesloaded');
 import Accordions from "van11y-accessible-accordion-aria";
 
+// Global function to toggle states
+window.toggleState = function(el, on, off) {
+  el.setAttribute(
+    "data-state",
+    el.getAttribute("data-state") === on ? off : on
+  );
+};
+
 /*
         Image galleries
         url: https://www.npmjs.com/package/flickity
@@ -36,7 +44,7 @@ if (document.querySelectorAll(".gallery")) {
         Note: If not using, remove @import "../../node_modules/choices.js/assets/styles/scss/choices"; from `assets/sass/global.scss`
     */
 if (document.querySelectorAll("select").length > 0) {
-  const multipleDefault = new Choices("select");
+  const selectElements = new Choices("select");
 }
 
 /*
@@ -64,10 +72,11 @@ if (document.querySelectorAll("select").length > 0) {
 /*
         Menu burger
     */
-const navToggle = document.getElementById("js-navToggle");
-if (navToggle) {
-  navToggle.addEventListener("click", function(e) {
-    document.body.classList.toggle("nav-open");
+const menuBurgerBtn = document.getElementById("js-navToggle");
+
+if (menuBurgerBtn) {
+  menuBurgerBtn.addEventListener("click", function(e) {
+    toggleState(document.body, "nav-open", "nav-closed");
   });
 }
 
@@ -83,4 +92,4 @@ for (let i = 0, linksLength = links.length; i < linksLength; i++) {
 }
 
 // LazyLoad
-const myLazyLoad = new LazyLoad();
+const lazyLoadImages = new LazyLoad();

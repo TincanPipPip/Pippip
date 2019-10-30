@@ -12,7 +12,7 @@
     }
   }
 
-  .nav-open & {
+  [data-state="nav-open"] & {
     display: block;
   }
 }
