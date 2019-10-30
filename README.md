@@ -28,21 +28,12 @@ Pippip v3 is a Drupal 8 base theme, utilising Gulp, Browsersync, ES6 & SASS.
 
 ## Setup
 
-<<<<<<< HEAD
 - Place all provided image assets in `./assets/img`
 - Place all fonts in `./dist/fonts`
 - From the root pippip folder:
   - Run `npm install`
   - Update `localUrl` in `gulpfile.js` with local site domain
   - Run `gulp` to start compiling & watching the files
-=======
-1. Place all provided image assets in `./assets/img`
-1. Place all fonts in `./dist/fonts`
-1. From the root pippip folder:
-  * Run `npm install`
-  * Update `localUrl` in `gulpfile.js` with local site domain
-  * Run `gulp` to start compiling & watching the files
->>>>>>> 6a34b65a0a87983704b0e5897e4b3f722be874f8
 
 ## Gulp
 
@@ -59,7 +50,7 @@ Also included is [BrowserSync](https://browsersync.io/). This provides synchroni
 
 ## CSS
 
-Pippip v2 is [SASS](https://sass-lang.com) based.
+Pippip v2 is [SASS](https://sass-lang.com) based. Folder structure loosely follows the [Patterlab methodology](https://patternlab.io/)
 
 #### Included helper classes
 
@@ -68,23 +59,14 @@ Pippip v2 is [SASS](https://sass-lang.com) based.
 #### SASS file structure
 
 - `./assets/sass/global.scss` contains all imports to generate single `dist/css/style.css`
-
-~~ - `./assets/sass/base/normalize` - basic reset css~~
-~~ - `../../node_modules/reflex-grid/scss/reflex.scss` - grid system~~
-~~ - `./assets/sass/helpers/mediaq` - media query breakpoints~~
-~~ - `./assets/sass/helpers/mixins` - sitewide mixins~~
-~~ - `./assets/sass/helpers/vars` - sitewide variables~~
-~~ - `./assets/sass/helpers/fonts` - font information~~
-~~ - `./assets/sass/vendor/include-media` - Inline media queries mixins~~
-~~ - `../../node_modules/baguettebox.js/src/baguetteBox` - JS module stylesheet~~
-~~ - `../../node_modules/choices.js/assets/styles/scss/choices` - JS module stylesheet~~
-~~ - `../../node_modules/flickity/css/flickity.css` - JS module stylesheet~~
-~~ - `./assets/sass/vendor/modal` - JS Vanilla modal styles~~
-~~ - `./assets/sass/base/defaults` - general default styling applied to all sites~~
-~~ - `./assets/sass/base/_drupal.scss` - Drupal specific default styles~~
-~~ - `./assets/sass/layout/*` - overall global styles (e.g. `_header.scss`, `_footer.scss`, `_styles.scss`)~~
-~~ - `./assets/sass/components/*` - specific components (e.g. `_nav.scss`)~~
-~~ - `./assets/sass/pages/*` - page/CT specific (e.g. `_front.scss`)~~
+- `./vendor/*` contains third party stylesheets
+- `./config/*` contains global variables
+- `./helpers/*` contains animations, breakpoints & global mixins
+- `./base/*` contains CSS normalize, D8 specific, global and typography stylesheets
+- `./templates/*` contains template level stylesheets (e.g. CT level)
+- `./organisms/*` contains organism level stylesheets (e.g. header, footer)
+- `./molecules/*` contains molecule level stylesheets (e.g. entities, nav)
+- `./atoms/*` contains atom level stylesheets (e.g. buttons)
 
 #### Grid
 
