@@ -1,11 +1,10 @@
 /**
  * ----------------------
  * Un.titled
- * Base - defaults
+ * Base - Defaults
  * ----------------------
  */
 
-// Grid default row width & gutter
 .grid {
   max-width: 1720px;
 }
@@ -14,8 +13,22 @@
   max-width: none;
 }
 
+ul.menu,
+ul.plain {
+  @include li-reset;
+}
+
 img {
   -webkit-backface-visibility: hidden;
+  transition: 0.2s $easing;
+
+  &.lazy {
+    opacity: 0;
+  }
+
+  &.loaded {
+    opacity: 1;
+  }
 }
 
 .svg {

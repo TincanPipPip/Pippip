@@ -1,9 +1,0 @@
-.header {
-  &__logo {
-    @include rm-text;
-    @include bg-img;
-    background-image: url("../img/logo.svg");
-    background-position: left center;
-    display: block;
-  }
-}

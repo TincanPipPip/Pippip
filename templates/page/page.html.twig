@@ -39,9 +39,9 @@
  * @see html.html.twig
  */
 #}
-<header id="js-header" class="header">
+<header id="js-header" class="o-header">
 
-  <a href="/" title="{{ drupal_config('system.site', 'name') }}" rel="home" class="header__logo">{% include '@pippip/partials/svg/logo.html.twig' %}</a>
+  <a href="/" title="{{ drupal_config('system.site', 'name') }}" rel="home" class="o-header__logo">{% include '@pippip/partials/svg/logo.html.twig' %}</a>
 
   {{ page.nav }}
 
@@ -61,7 +61,7 @@
     {{ page.content }}
   {% endblock %}
 
-  <footer class="footer">
+  <footer class="o-footer">
     {{ page.footer }}
 
     {{ drupal_menu('footer') }}

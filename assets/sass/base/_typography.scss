@@ -1,11 +1,13 @@
 /**
  * ----------------------
  * Un.titled
- * Base - typography
+ * Base - Typography
  * ----------------------
  */
 
-// @font-face blah here...
+/*
+ * Config
+ */
 
 @mixin font-body {
   font-family: arial, sans-serif;
@@ -19,6 +21,22 @@
 @mixin font-title {
   font-weight: 400;
 }
+
+@mixin font-h1 {
+}
+
+@mixin font-h2 {
+}
+
+@mixin font-h3 {
+}
+
+@mixin font-h4 {
+}
+
+/**
+ * Styles
+ */
 
 body,
 html {
@@ -40,6 +58,26 @@ h6,
 .h6 {
   @include font-title;
   margin: 0 0 $bump/2;
+}
+
+h1,
+.h1 {
+  @include font-h1;
+}
+
+h2,
+.h2 {
+  @include font-h2;
+}
+
+h3,
+.h3 {
+  @include font-h3;
+}
+
+h4,
+.h4 {
+  @include font-h4;
 }
 
 p {
@@ -73,5 +111,6 @@ a {
 
   &.no-click {
     pointer-events: none;
+    cursor: default;
   }
 }

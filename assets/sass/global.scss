@@ -23,7 +23,10 @@
 
 @import "templates/front";
 
+@import "organisms/header";
+@import "organisms/footer";
 @import "organisms/views";
+@import "organisms/search-results";
 
 @import "molecules/emmsg";
 @import "molecules/entity";

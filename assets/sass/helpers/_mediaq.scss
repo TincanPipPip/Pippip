@@ -1,14 +1,9 @@
-/* --- Media queries --- */
-
-//	USAGE:
-//
-//	@include media(">xs", "<=1150px") {
-//		font-size:4.0rem;
-//	}
-//
-//	@include media("<lg") {
-//		width:100%;
-//	}
+/**
+ * ----------------------
+ * Un.titled
+ * Helpers - Breakpoints
+ * ----------------------
+ */
 
 // NOTE: These breakpoints coincide with those built in to Reflexgrid
 $breakpoints: (

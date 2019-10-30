@@ -1,6 +1,9 @@
-// --------------------------------
-//					   		 MIXINS
-// --------------------------------
+/**
+ * ----------------------
+ * Un.titled
+ * Helpers - Global mixins
+ * ----------------------
+ */
 
 // Reset <li> elements
 @mixin li-reset {
@@ -19,23 +22,13 @@
 @mixin rm-text {
   text-align: left;
   text-indent: -9999px;
-  *font-size: 0;
-  *line-height: 0px;
 }
 
-// Remove li bottom margin
-@mixin li-margin($columns, $marginBottom) {
-  &:nth-last-child(-n + #{$columns}):nth-child(#{$columns}n + 1),
-  &:nth-last-child(-n + #{$columns}):nth-child(#{$columns}n + 1) ~ li {
-    margin-bottom: $marginBottom;
-  }
-}
-
-// Centered background images
-@mixin bg-img {
+// Background images
+@mixin bg-img($size) {
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: $size;
 }
 
 // IE 9+ only
