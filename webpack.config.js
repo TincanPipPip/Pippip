@@ -60,6 +60,7 @@ module.exports = (env, argv) => {
     resolve: {
       alias: {
         modernizr$: path.resolve(__dirname, '.modernizrrc.js'),
+        swiper$: 'swiper/dist/js/swiper.js',
       },
     },
     plugins: isProduction
