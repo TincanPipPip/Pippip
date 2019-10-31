@@ -1,0 +1,20 @@
+/**
+ * ----------------------
+ * Un.titled
+ * Helpers - Font Smoothing
+ * ----------------------
+ */
+
+@mixin font-smoothing($override: false) {
+  @if $override == false {
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      -moz-font-smoothing: grayscale;
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+    }
+  } @else {
+    -moz-font-smoothing: grayscale;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+  }
+}

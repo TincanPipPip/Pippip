@@ -1,0 +1,35 @@
+/**
+ * ----------------------
+ * Un.titled
+ * Config - Layout
+ * ----------------------
+ */
+
+/**
+ * Page
+ */
+$container-width: 102.222rem;
+
+/**
+ * Breakpoints
+ */
+$breakpoints: (
+  'initial': 0em,
+  'mobile-low': 23em,
+  'mobile': 30em,
+  'tablet': 43.125em,
+  'desktop': 56.875em,
+  'wide': 79.6875em,
+  'wider': 93.75em,
+  'page': 115em,
+);
+
+/**
+ * z-index
+ */
+$zindex-super: 9999;
+$zindex-highest: 50;
+$zindex-higher: 40;
+$zindex-high: 30;
+$zindex-mid: 20;
+$zindex-low: 10;
