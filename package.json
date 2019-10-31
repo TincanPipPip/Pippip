@@ -9,7 +9,7 @@
   "scripts": {
     "start": "webpack --mode development --watch --progress",
     "dev": "webpack --mode development",
-    "prod": "webpack --mode production"
+    "build": "webpack --mode production"
   },
   "dependencies": {
     "baguettebox.js": "^1.11.0",

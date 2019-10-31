@@ -16,9 +16,9 @@
 /**
  * Config
  */
+@import 'config/typography';
 @import 'config/font';
 @import 'config/layout';
-@import 'config/typography';
 @import 'config/vars';
 
 /**
@@ -37,10 +37,10 @@
  * Base
  */
 @import 'base/defaults';
+@import 'base/typography';
 @import 'base/drupal8';
 @import 'base/icon';
 @import 'base/main';
-@import 'base/typography';
 //@import 'choices.js/assets/styles/scss/choices';
 
 /**
