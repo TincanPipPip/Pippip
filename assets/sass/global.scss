@@ -1,33 +1,49 @@
 /**
  * ----------------------
  * Un.titled
+ * Main - Global
  * ----------------------
  */
 
+/**
+ * Dependencies
+ */
+@import 'reflex-grid/scss/reflex.scss';
+@import 'include-media/dist/_include-media';
+@import 'baguettebox.js/src/baguetteBox';
+@import 'normalize.scss/normalize.scss';
+
+/**
+ * Config
+ */
+@import 'config/vars';
+
+/**
+ * Helpers
+ */
 @import 'helpers/animations';
 @import 'helpers/mediaq';
 @import 'helpers/mixins';
 
-@import 'config/vars';
-
-@import 'base/normalize';
-@import '../../node_modules/reflex-grid/scss/reflex.scss';
+/**
+ * Base
+ */
+@import 'base/defaults';
 @import 'base/typography';
 @import 'base/drupal8';
-@import 'base/defaults';
+@import 'base/icon';
+//@import 'choices.js/assets/styles/scss/choices';
 
-@import 'vendor/include-media';
-@import '../../node_modules/baguettebox.js/src/baguetteBox';
-@import '../../node_modules/choices.js/assets/styles/scss/choices';
-// @import "../../node_modules/flickity/css/flickity.css";
+/**
+ * Atoms
+ */
+@import 'atoms/nav-toggle';
+@import 'atoms/buttons';
+@import 'atoms/image-credit';
 
-@import 'templates/front';
-
-@import 'organisms/header';
-@import 'organisms/footer';
-@import 'organisms/views';
-@import 'organisms/search-results';
-
+/**
+ * Molecules
+ */
 @import 'molecules/emmsg';
 @import 'molecules/entity';
 @import 'molecules/forms';
@@ -36,6 +52,15 @@
 @import 'molecules/banner';
 @import 'molecules/linked-logos';
 
-@import 'atoms/nav-toggle';
-@import 'atoms/buttons';
-@import 'atoms/image-credit';
+/**
+ * Organisims
+ */
+@import 'organisms/header';
+@import 'organisms/footer';
+@import 'organisms/views';
+@import 'organisms/search-results';
+
+/**
+ * Templates
+ */
+@import 'templates/front';
