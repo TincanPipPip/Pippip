@@ -2,14 +2,16 @@
 
 const webpack = require('webpack'),
   path = require('path'),
-  browserSyncPlugin = require('browser-sync-webpack-plugin'),
   copyWebpackPlugin = require('copy-webpack-plugin'),
   imageminPlugin = require('imagemin-webpack-plugin').default,
+  browserSyncPlugin = require('browser-sync-webpack-plugin'),
   miniCssExtractPlugin = require('mini-css-extract-plugin'),
+  proxy = 'pippip.localhost',
+  entry = require('webpack-glob-entry'),
   defaultPlugins = [
-    new copyWebpackPlugin([{ from: 'assets/img', to: 'img' }, { from: 'assets/icon', to: 'icon' }]),
+    new copyWebpackPlugin([{ from: 'assets/img', to: 'img' }, { from: 'assets/icon', to: 'icon' }, { from: 'assets/font', to: 'font' }]),
     new miniCssExtractPlugin({
-      filename: 'css/[name].css',
+      filename: '[name].css',
     }),
   ];
 
@@ -21,13 +23,14 @@ module.exports = (env, argv) => {
     entry: {
       '/js/modernizr.js': './assets/js/modernizr.js',
       '/js/defaults.js': './assets/js/defaults.js',
-      global: './assets/sass/global.scss',
+      'css/global.css': './assets/sass/global.scss',
     },
     output: {
       publicPath: 'dist',
       path: path.resolve(__dirname, 'dist'),
       filename: '[name]',
     },
+    stats: 'errors-warnings',
     module: {
       rules: [
         {
@@ -100,9 +103,8 @@ module.exports = (env, argv) => {
           ...defaultPlugins,
           new browserSyncPlugin({
             host: 'localhost',
-            files: '**/*',
             port: 3000,
-            proxy: 'pippip.localhost',
+            proxy: `https://${proxy}`,
           }),
         ],
   };

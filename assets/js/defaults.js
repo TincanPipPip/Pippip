@@ -8,12 +8,10 @@ import Accordions from 'van11y-accessible-accordion-aria';
 
 // Global function to toggle states
 window.toggleState = function(el, dataname, on, off) {
-  el.setAttribute(
-    `data-${dataname}`,
-    el.getAttribute(`data-${dataname}`) === on ? off : on
-  );
+  el.setAttribute(`data-${dataname}`, el.getAttribute(`data-${dataname}`) === on ? off : on);
 };
 
+// alert('test 1');
 /*
         Image galleries
         url: https://www.npmjs.com/package/flickity
