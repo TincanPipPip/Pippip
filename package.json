@@ -7,19 +7,17 @@
   "author": "",
   "license": "ISC",
   "scripts": {
-    "start": "webpack --mode development --watch",
-    "dev": "webpack --mode development",
-    "build": "webpack --mode production"
+    "dev": "NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "production": "NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "start": "NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
   },
   "dependencies": {
     "baguettebox.js": "^1.11.0",
-    "choices.js": "^8.0.0",
     "enquire.js": "^2.1.6",
     "focus-visible": "^5.0.2",
     "focus-within": "^3.0.2",
     "include-media": "^1.4.9",
     "js-cookie": "^2.2.1",
-    "modernizr": "^3.8.0",
     "normalize.scss": "^0.1.0",
     "objectFitPolyfill": "^2.3.0",
     "picturefill": "^3.0.3",
@@ -30,28 +28,16 @@
     "zenscroll": "^4.0.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.6.4",
-    "@babel/preset-env": "^7.6.3",
-    "autoprefixer": "^9.7.0",
-    "babel-loader": "^8.0.6",
     "browser-sync": "^2.26.7",
-    "browser-sync-webpack-plugin": "^2.2.2",
+    "browser-sync-webpack-plugin": "^2.0.1",
     "copy-webpack-plugin": "^5.0.4",
-    "css-loader": "^3.2.0",
-    "eslint": "^6.6.0",
-    "eslint-config-prettier": "^6.5.0",
-    "eslint-plugin-prettier": "^3.1.1",
     "imagemin-webpack-plugin": "^2.4.2",
-    "mini-css-extract-plugin": "^0.8.0",
+    "laravel-mix": "^5.0.0",
+    "laravel-mix-glob": "^1.1.4",
+    "modernizr": "^3.8.0",
     "modernizr-loader": "^1.0.1",
-    "node-sass": "^4.13.0",
-    "postcss-loader": "^3.0.0",
-    "prettier": "^1.18.2",
+    "sass": "^1.23.3",
     "sass-loader": "^8.0.0",
-    "style-loader": "^1.0.0",
-    "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.9",
-    "webpack-dev-server": "^3.9.0",
-    "webpack-glob-entry": "^2.1.1"
+    "vue-template-compiler": "^2.6.10"
   }
 }

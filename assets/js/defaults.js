@@ -1,5 +1,5 @@
 import baguetteBox from 'baguettebox.js';
-import Choices from 'choices.js';
+//import Choices from 'choices.js';
 import zenscroll from 'zenscroll';
 import LazyLoad from 'vanilla-lazyload';
 //import Flickity from "flickity";
