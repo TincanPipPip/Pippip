@@ -12,3 +12,4 @@
 - [ ] Have a beer for a job bloody well done
 
 ## Harry
+- [ ] Tidy up docs/wiki
