@@ -10,34 +10,34 @@ window.toggleState = function(el, dataname, on, off) {
 };
 
 /*
-        Image galleries
-        url: https://www.npmjs.com/package/flickity
-        -----------------------------------------------
-    
-        Usage:
-        <div class="gallery">
-            <a href="path-to-large-image" data-caption="">
-                <img src="path-to-thumbnail" alt="" />
-            </a>
-        </div>
+  Image galleries
+  url: https://www.npmjs.com/package/flickity
+  -----------------------------------------------
 
-        Note: If not using, remove @import "../../node_modules/baguettebox.js/src/baguetteBox"; from `assets/sass/global.scss`
-    */
+  Usage:
+  <div class="gallery">
+      <a href="path-to-large-image" data-caption="">
+          <img src="path-to-thumbnail" alt="" />
+      </a>
+  </div>
+
+  Note: If not using, remove @import "../../node_modules/baguettebox.js/src/baguetteBox"; from `assets/sass/global.scss`
+*/
 
 if (document.querySelectorAll('.gallery')) {
   baguetteBox.run('.gallery');
 }
 
 /*
-        Better <select> elements
-        url: https://www.npmjs.com/package/choices.js
-        -----------------------------------------------
-    
-        Usage:
-        Selects all <select> elements by default
+  Better <select> elements
+  url: https://www.npmjs.com/package/choices.js
+  -----------------------------------------------
 
-        Note: If not using, remove @import "../../node_modules/choices.js/assets/styles/scss/choices"; from `assets/sass/global.scss`
-    */
+  Usage:
+  Selects all <select> elements by default
+
+  Note: If not using, remove @import "../../node_modules/choices.js/assets/styles/scss/choices"; from `assets/sass/global.scss`
+*/
 // if (document.querySelectorAll('select').length > 0) {
 //   const selectElements = new Choices('select');
 // }
@@ -54,8 +54,8 @@ if (menuBurgerBtn) {
 }
 
 /*
-        Automatically open external links in new tab
-    */
+  Automatically open external links in new tab
+*/
 const links = document.links;
 
 for (let i = 0, linksLength = links.length; i < linksLength; i++) {
