@@ -1,0 +1,52 @@
+/**
+ * ----------------------
+ * Un.titled
+ * Config - Typography
+ * ----------------------
+ */
+
+/**
+ * Font family
+ */
+$font-body: 'Montserrat';
+
+/**
+ * Font Scale
+ * https://www.modularscale.com/
+ * Note - Base size should stay at 1em as base font size
+ * is set below.
+ */
+$modularscale: (
+  base: 1em,
+  ratio: 1.618,
+);
+
+/**
+ * Font Size
+ */
+$font-base-size: 112.5%; //Set document root size to base font size
+
+/**
+ * Font weight
+ */
+$weight-thin: 100;
+$weight-extra-light: 200;
+$weight-light: 300;
+$weight-regular: 400;
+$weight-medium: 500;
+$weight-semibold: 600;
+$weight-bold: 700;
+$weight-extrabold: 800;
+$weight-black: 900;
+
+/**
+ * Line height
+ */
+$line-display: 1.25;
+$line-body: 1.55;
+
+/**
+ * Kerning
+ */
+$kern-display: normal;
+$kern-body: normal;

@@ -7,8 +7,7 @@
 
 /**
  * Config
- **/
-
+ */
 $height-icon: $bump;
 $width-line: $bump * 1.5;
 $height-line: 4px;
@@ -19,8 +18,7 @@ $translateX: 0;
 
 /**
  * Styles
- **/
-
+ */
 .a-nav-toggle {
   border: 0;
   padding: 0;
@@ -59,8 +57,7 @@ $translateX: 0;
       }
 
       [data-nav='open'] & {
-        transform: translateY($translateY) translateX($translateX)
-          rotate($rotation);
+        transform: translateY($translateY) translateX($translateX) rotate($rotation);
       }
     }
     &-2 {
@@ -78,8 +75,7 @@ $translateX: 0;
       }
 
       [data-nav='open'] & {
-        transform: translateY($translateY * -1) translateX($translateX)
-          rotate($rotation * -1);
+        transform: translateY($translateY * -1) translateX($translateX) rotate($rotation * -1);
       }
     }
   }

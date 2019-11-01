@@ -1,33 +1,58 @@
 /**
  * ----------------------
  * Un.titled
+ * Main - Global
  * ----------------------
  */
 
-@import 'helpers/animations';
-@import 'helpers/mediaq';
-@import 'helpers/mixins';
+/**
+ * Dependencies
+ */
+@import 'baguettebox.js/src/baguetteBox';
+@import 'include-media/dist/_include-media';
+@import 'normalize.scss/normalize.scss';
+@import 'reflex-grid/scss/reflex.scss';
 
+/**
+ * Config
+ */
+@import 'config/typography';
+@import 'config/font';
+@import 'config/layout';
 @import 'config/vars';
 
-@import 'base/normalize';
-@import '../../node_modules/reflex-grid/scss/reflex.scss';
+/**
+ * Helpers
+ */
+@import 'helpers/animations';
+@import 'helpers/clearfix';
+@import 'helpers/focus-visible';
+@import 'helpers/font-smoothing';
+@import 'helpers/mediaq';
+@import 'helpers/mixins';
+@import 'helpers/size';
+@import 'helpers/table';
+
+/**
+ * Base
+ */
+@import 'base/defaults';
 @import 'base/typography';
 @import 'base/drupal8';
-@import 'base/defaults';
+@import 'base/icon';
+@import 'base/main';
+//@import 'choices.js/assets/styles/scss/choices';
 
-@import 'vendor/include-media';
-@import '../../node_modules/baguettebox.js/src/baguetteBox';
-@import '../../node_modules/choices.js/assets/styles/scss/choices';
-// @import "../../node_modules/flickity/css/flickity.css";
+/**
+ * Atoms
+ */
+@import 'atoms/nav-toggle';
+@import 'atoms/buttons';
+@import 'atoms/image-credit';
 
-@import 'templates/front';
-
-@import 'organisms/header';
-@import 'organisms/footer';
-@import 'organisms/views';
-@import 'organisms/search-results';
-
+/**
+ * Molecules
+ */
 @import 'molecules/emmsg';
 @import 'molecules/entity';
 @import 'molecules/forms';
@@ -36,6 +61,15 @@
 @import 'molecules/banner';
 @import 'molecules/linked-logos';
 
-@import 'atoms/nav-toggle';
-@import 'atoms/buttons';
-@import 'atoms/image-credit';
+/**
+ * Organisims
+ */
+@import 'organisms/header';
+@import 'organisms/footer';
+@import 'organisms/views';
+@import 'organisms/search-results';
+
+/**
+ * Templates
+ */
+@import 'templates/front';

@@ -1,0 +1,30 @@
+/**
+ * ----------------------
+ * Un.titled
+ * Base - Main
+ * ----------------------
+ */
+
+/**
+ * Styles
+ */
+html {
+  font-size: $font-base-size;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  @include font-smoothing(true);
+  display: flex;
+  flex-direction: column;
+}
+
+main[role='main'] {
+  flex: 1 0 auto;
+}

@@ -1,54 +1,57 @@
 {
-  "name": "pippip",
+  "name": "empty-project",
   "version": "1.0.0",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/TincanPipPip/Pippip-v2"
-  },
-  "description": "Tincan base theme",
-  "main": "gulpfile.js",
-  "author": "Harry Edwards",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
+  "scripts": {
+    "start": "webpack --mode development --watch",
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production"
+  },
   "dependencies": {
     "baguettebox.js": "^1.11.0",
-    "choices.js": "^3.0.4",
-    "flickity": "^2.1.2",
-    "js-cookie": "^2.2.0",
+    "choices.js": "^8.0.0",
+    "enquire.js": "^2.1.6",
+    "focus-visible": "^5.0.2",
+    "focus-within": "^3.0.2",
+    "include-media": "^1.4.9",
+    "js-cookie": "^2.2.1",
+    "modernizr": "^3.8.0",
+    "normalize.scss": "^0.1.0",
+    "objectFitPolyfill": "^2.3.0",
+    "picturefill": "^3.0.3",
+    "reflex-grid": "^2.0.4",
+    "swiper": "^5.2.0",
     "van11y-accessible-accordion-aria": "^3.0.1",
-    "vanilla-lazyload": "^8.17.0",
+    "vanilla-lazyload": "^12.3.0",
     "zenscroll": "^4.0.2"
   },
   "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-preset-env": "^1.7.0",
-    "babelify": "^8.0.0",
-    "browser-sync": "^2.26.3",
-    "browserify": "^16.2.3",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^6.0.0",
-    "gulp-eslint": "^5.0.0",
-    "gulp-imagemin": "^4.1.0",
-    "gulp-plumber": "^1.2.0",
-    "gulp-sass": "^4.0.2",
-    "gulp-sourcemaps": "^2.6.4",
-    "gulp-tap": "^1.0.1",
-    "gulp-uglify": "^3.0.1",
-    "gulp-util": "^3.0.8",
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "autoprefixer": "^9.7.0",
+    "babel-loader": "^8.0.6",
+    "browser-sync": "^2.26.7",
+    "browser-sync-webpack-plugin": "^2.2.2",
+    "copy-webpack-plugin": "^5.0.4",
+    "css-loader": "^3.2.0",
+    "eslint": "^6.6.0",
+    "eslint-config-prettier": "^6.5.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "imagemin-webpack-plugin": "^2.4.2",
+    "mini-css-extract-plugin": "^0.8.0",
+    "modernizr-loader": "^1.0.1",
+    "node-sass": "^4.13.0",
+    "postcss-loader": "^3.0.0",
     "prettier": "^1.18.2",
-    "reflex-grid": "^2.0.3",
-    "vinyl-buffer": "^1.0.1"
-  },
-  "babel": {
-    "presets": [
-      [
-        "env",
-        {
-          "targets": {
-            "ie": "10"
-          },
-          "useBuiltIns": true
-        }
-      ]
-    ]
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.9.0",
+    "webpack-glob-entry": "^2.1.1"
   }
 }
