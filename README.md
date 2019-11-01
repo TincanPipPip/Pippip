@@ -125,9 +125,9 @@ Usage notes for each plugin can be found in `assets/js/defaults.js`
 
 - [BaugetteBox](https://www.npmjs.com/package/baguettebox.js)
   - Image lightbox
-- [Zenscroll](https://github.com/zengabor/zenscroll)
-  - Anchor scroll animation
-- [VanillaModal](https://www.npmjs.com/package/vanilla-modal)
-  - Custom modal overlays
+- [LazyLoad](https://github.com/verlok/lazyload)
+  - Lazyload images
 - [Van11y accessible accordion](https://github.com/nico3333fr/van11y-accessible-accordion-aria)
   - Accessible vanilla JS accordion
+- [Zenscroll](https://github.com/zengabor/zenscroll)
+  - Anchor scroll animation
