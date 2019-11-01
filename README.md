@@ -36,7 +36,7 @@ Pippip v3 is a Drupal 8 base theme, utilising Webpack, Browsersync, ES6 & SASS.
 
 ## Webpack
 
-Pippip v3 runs [Webpack](https://webpack.js.org/)
+Pippip v3 runs [Webpack](https://webpack.js.org/). Run `npm start` to begin development
 
 ## CSS
 
