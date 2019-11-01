@@ -5,8 +5,7 @@ Contents:
 - [About](#About)
 - [Browser support](#browser-support)
 - [Setup](#setup)
-  ~~- [Gulp](#Gulp)~~
-  ~~- [Gulp tasks](#Gulp-tasks)~~
+- [Webpack](#webpack)
 - [CSS](#css)
 - [Included helper classes](#included-helper-classes)
 - [SASS file structure](#sass-file-structure)
@@ -17,7 +16,7 @@ Contents:
 
 ## About
 
-Pippip v3 is a Drupal 8 base theme, utilising ~~Gulp, Browsersync~~, ES6 & SASS.
+Pippip v3 is a Drupal 8 base theme, utilising Webpack, Browsersync, ES6 & SASS.
 
 #### Browser support
 
@@ -35,22 +34,13 @@ Pippip v3 is a Drupal 8 base theme, utilising ~~Gulp, Browsersync~~, ES6 & SASS.
   - Update `localUrl` in `gulpfile.js` with local site domain
   - Run `gulp` to start compiling & watching the files
 
-~~## Gulp~~
+## Webpack
 
-~~Pippip v2 utilises Gulp.js for better workflow. For information on installing Gulp see [website](https://gulpjs.com/)~~
-
-~~Also included is [BrowserSync](https://browsersync.io/). This provides synchronised browser testing, allowing the dev to see the local site on multiple devices, with real time updates.~~
-
-~~#### Gulp tasks~~
-
-~~- `js` - lints, compiles to ES5 & minifies to `./dist/js` folder~~
-~~- `sass` - lints, compiles via uatoprefixer & minifies to `./dist/css` folder~~
-~~- `images` - minifies all images in `./assets/img` and moves to `./dist/img` folder~~
-~~- `default` - primary task, runs all tasks, initialises Browsersync & watches for any file changes~~
+Pippip v3 runs [Webpack](https://webpack.js.org/)
 
 ## CSS
 
-Pippip v2 is [SASS](https://sass-lang.com) based. Folder structure loosely follows the [Patterlab methodology](https://patternlab.io/)
+Pippip v3 is [SASS](https://sass-lang.com) based. Folder structure loosely follows the [Patterlab methodology](https://patternlab.io/)
 
 #### Included helper classes
 
@@ -76,7 +66,7 @@ See [documentation](http://reflexgrid.com/docs/) for details & usage.
 
 ## JS
 
-Pippip v2 is ES6 based (rather than jQuery) by default, and gets converted to ES5 on compile for better browser support.
+Pippip v3 is ES6 based (rather than jQuery) by default, and gets converted to ES5 on compile for better browser support.
 
 #### Included JS files
 
