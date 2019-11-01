@@ -25,7 +25,7 @@ module.exports = (env, argv) => {
       '/js/defaults.js': './assets/js/defaults.js',
       '/js/emmsg.js': './assets/js/emmsg.js',
       '/js/global.js': './assets/js/global.js',
-      'css/global.css': './assets/sass/global.scss',
+      '/css/global.css': './assets/sass/global.scss',
     },
     output: {
       publicPath: 'dist',
