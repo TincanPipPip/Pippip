@@ -23,8 +23,8 @@ module.exports = (env, argv) => {
     entry: {
       '/js/modernizr.js': './assets/js/modernizr.js',
       '/js/defaults.js': './assets/js/defaults.js',
-      '/js/defaults.js': './assets/js/emmsg.js',
-      '/js/defaults.js': './assets/js/global.js',
+      '/js/emmsg.js': './assets/js/emmsg.js',
+      '/js/global.js': './assets/js/global.js',
       'css/global.css': './assets/sass/global.scss',
     },
     output: {
