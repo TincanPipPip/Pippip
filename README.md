@@ -82,7 +82,7 @@ Pippip v3 is ES6 based (rather than jQuery) by default, and gets converted to ES
 
 - `assets/js/defaults.js` contains all the default plugins & global functions
 - `assets/js/global.js` is a blank file for global project specific JS
-- `assets/js/emmsg.js` contains emergency message js
+- `assets/js/emmsg.js` contains emergency message JS
 
 #### Included plugins
 
