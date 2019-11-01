@@ -35,18 +35,18 @@ Pippip v3 is a Drupal 8 base theme, utilising Gulp, Browsersync, ES6 & SASS.
   - Update `localUrl` in `gulpfile.js` with local site domain
   - Run `gulp` to start compiling & watching the files
 
-## Gulp
+~~## Gulp~~
 
-Pippip v2 utilises Gulp.js for better workflow. For information on installing Gulp see [website](https://gulpjs.com/)
+~~Pippip v2 utilises Gulp.js for better workflow. For information on installing Gulp see [website](https://gulpjs.com/)~~
 
-Also included is [BrowserSync](https://browsersync.io/). This provides synchronised browser testing, allowing the dev to see the local site on multiple devices, with real time updates.
+~~Also included is [BrowserSync](https://browsersync.io/). This provides synchronised browser testing, allowing the dev to see the local site on multiple devices, with real time updates.~~
 
-#### Gulp tasks
+~~#### Gulp tasks~~
 
-- `js` - lints, compiles to ES5 & minifies to `./dist/js` folder
-- `sass` - lints, compiles via uatoprefixer & minifies to `./dist/css` folder
-- `images` - minifies all images in `./assets/img` and moves to `./dist/img` folder
-- `default` - primary task, runs all tasks, initialises Browsersync & watches for any file changes
+~~- `js` - lints, compiles to ES5 & minifies to `./dist/js` folder~~
+~~- `sass` - lints, compiles via uatoprefixer & minifies to `./dist/css` folder~~
+~~- `images` - minifies all images in `./assets/img` and moves to `./dist/img` folder~~
+~~- `default` - primary task, runs all tasks, initialises Browsersync & watches for any file changes~~
 
 ## CSS
 
@@ -54,7 +54,7 @@ Pippip v2 is [SASS](https://sass-lang.com) based. Folder structure loosely follo
 
 #### Included helper classes
 
-- `.hidden` - foricbly hides element from view & screen readers
+- `.hidden` - forcibly hides element from view & screen readers
 
 #### SASS file structure
 
