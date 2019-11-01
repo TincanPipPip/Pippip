@@ -6,25 +6,6 @@
  */
 
 /**
- * Font directory
- */
-$font-dir: '../font';
-
-@font-face {
-  font-family: 'Monserrat';
-  src: url('#{$font-dir}/font.woff2') format('woff2'), url('#{$font-dir}/font.woff') format('woff');
-  font-weight: $weight-regular;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Monserrat';
-  src: url('#{$font-dir}/font-italic.woff2') format('woff2'), url('#{$font-dir}/font-italic.woff') format('woff');
-  font-weight: $weight-regular;
-  font-style: italic;
-}
-
-/**
  * Font family
  */
 $font-body: 'Monserrat';
@@ -69,3 +50,22 @@ $line-body: 1.55;
  */
 $kern-display: normal;
 $kern-body: normal;
+
+/**
+ * Custom fonts
+ */
+$font-dir: '../font';
+
+@font-face {
+  font-family: 'Monserrat';
+  src: url('#{$font-dir}/font.woff2') format('woff2'), url('#{$font-dir}/font.woff') format('woff');
+  font-weight: $weight-regular;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Monserrat';
+  src: url('#{$font-dir}/font-italic.woff2') format('woff2'), url('#{$font-dir}/font-italic.woff') format('woff');
+  font-weight: $weight-regular;
+  font-style: italic;
+}
