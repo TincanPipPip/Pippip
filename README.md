@@ -36,7 +36,7 @@ Pippip v3 is a Drupal 8 base theme, utilising Webpack, Browsersync, ES6 & SASS.
 
 ## Webpack
 
-Pippip v3 runs [Webpack](https://webpack.js.org/). Run `npm start` to begin development
+Pippip v3 runs [Webpack](https://webpack.js.org/). Run `npm i` from the theme folder to install dependencies, then `npm start` to begin development
 
 ## CSS
 
@@ -49,7 +49,6 @@ Pippip v3 is [SASS](https://sass-lang.com) based. Folder structure loosely follo
 #### SASS file structure
 
 - `./assets/sass/global.scss` contains all imports to generate single `dist/css/style.css`
-- `./vendor/*` contains third party stylesheets
 - `./config/*` contains global variables
 - `./helpers/*` contains animations, breakpoints & global mixins
 - `./base/*` contains CSS normalize, D8 specific, global and typography stylesheets
