@@ -11,14 +11,14 @@
 $font-dir: '../font';
 
 @font-face {
-  font-family: 'Cheltenham';
+  font-family: 'Monserrat';
   src: url('#{$font-dir}/font.woff2') format('woff2'), url('#{$font-dir}/font.woff') format('woff');
   font-weight: $weight-regular;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Cheltenham';
+  font-family: 'Monserrat';
   src: url('#{$font-dir}/font-italic.woff2') format('woff2'), url('#{$font-dir}/font-italic.woff') format('woff');
   font-weight: $weight-regular;
   font-style: italic;
@@ -27,7 +27,7 @@ $font-dir: '../font';
 /**
  * Font family
  */
-$font-body: 'Montserrat';
+$font-body: 'Monserrat';
 
 /**
  * Font Scale
