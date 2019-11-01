@@ -2,8 +2,6 @@ import baguetteBox from 'baguettebox.js';
 //import Choices from 'choices.js';
 import zenscroll from 'zenscroll';
 import LazyLoad from 'vanilla-lazyload';
-//import Flickity from "flickity";
-//require('flickity-imagesloaded');
 import Accordions from 'van11y-accessible-accordion-aria';
 
 // Global function to toggle states
@@ -11,7 +9,6 @@ window.toggleState = function(el, dataname, on, off) {
   el.setAttribute(`data-${dataname}`, el.getAttribute(`data-${dataname}`) === on ? off : on);
 };
 
-// alert('test 1');
 /*
         Image galleries
         url: https://www.npmjs.com/package/flickity
@@ -41,31 +38,9 @@ if (document.querySelectorAll('.gallery')) {
 
         Note: If not using, remove @import "../../node_modules/choices.js/assets/styles/scss/choices"; from `assets/sass/global.scss`
     */
-if (document.querySelectorAll('select').length > 0) {
-  const selectElements = new Choices('select');
-}
-
-/*
-        Carousel
-        url: https://www.npmjs.com/package/flickity
-        -----------------------------------------------
-    
-        Usage:
-        <div class="carousel">
-            <div class="carousel-cell">
-                <!-- slide content -->
-            </div>
-        </div>
-
-        Note: Disabled by default. To enable uncomment import above and code below and uncoment @import "../../node_modules/flickity/css/flickity.css"; from `assets/sass/global.scss`
-
-        const flickity = new Flickity(".carousel", {
-            cellAlign: "left",
-            cellSelector: ".carousel-cell",
-            contain: true,
-            imagesLoaded: true
-        });
-    */
+// if (document.querySelectorAll('select').length > 0) {
+//   const selectElements = new Choices('select');
+// }
 
 /*
         Menu burger
