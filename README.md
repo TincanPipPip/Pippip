@@ -5,8 +5,8 @@ Contents:
 - [About](#About)
 - [Browser support](#browser-support)
 - [Setup](#setup)
-- [Gulp](#Gulp)
-- [Gulp tasks](#Gulp-tasks)
+  ~~- [Gulp](#Gulp)~~
+  ~~- [Gulp tasks](#Gulp-tasks)~~
 - [CSS](#css)
 - [Included helper classes](#included-helper-classes)
 - [SASS file structure](#sass-file-structure)
@@ -17,7 +17,7 @@ Contents:
 
 ## About
 
-Pippip v3 is a Drupal 8 base theme, utilising Gulp, Browsersync, ES6 & SASS.
+Pippip v3 is a Drupal 8 base theme, utilising ~~Gulp, Browsersync~~, ES6 & SASS.
 
 #### Browser support
 
