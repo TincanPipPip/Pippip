@@ -3,7 +3,7 @@ global:
   version: 1.x
   css:
     theme:
-      dist/css/global.css: {}
+      dist/css/global.css.css: {}
       dist/css/print.css: { media: print }
   js:
     https://cdn.polyfill.io/v2/polyfill.js: { type: external }
