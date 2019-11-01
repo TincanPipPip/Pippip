@@ -31,8 +31,8 @@ Pippip v3 is a Drupal 8 base theme, utilising Laravel Mix, Browsersync, ES6 & SA
 - Place all fonts in `./dist/fonts`
 - From the root pippip folder:
   - Run `npm install`
-  - Update `localUrl` in `gulpfile.js` with local site domain
-  - Run `gulp` to start compiling & watching the files
+  - Update `localUrl` in `webpack.mix.js` with local site domain
+  - Run `npm start` to start compiling & watching the files
 
 ## Laravel Mix
 
@@ -92,7 +92,7 @@ Pippip v3 is [SASS](https://sass-lang.com) based. Folder structure loosely follo
 - `./assets/sass/global.scss` contains all imports to generate single `dist/css/style.css`
 - `./config/*` contains global variables
 - `./helpers/*` contains animations, breakpoints & global mixins
-- `./base/*` contains CSS normalize, D8 specific, global and typography stylesheets
+- `./base/*` contains D8 specific, global and typography stylesheets
 - `./templates/*` contains template level stylesheets (e.g. CT level)
 - `./organisms/*` contains organism level stylesheets (e.g. header, footer)
 - `./molecules/*` contains molecule level stylesheets (e.g. entities, nav)
@@ -120,11 +120,6 @@ Usage notes for each plugin can be found in `assets/js/defaults.js`
 
 - [BaugetteBox](https://www.npmjs.com/package/baguettebox.js)
   - Image lightbox
-- [Choices](https://www.npmjs.com/package/choices.js)
-  - Better select elements
-- [Flickity](https://www.npmjs.com/package/flickity)
-  - Carousels
-  - **Disabled by default** See notes in `./assets/js/defaults.js` for enabling
 - [Zenscroll](https://github.com/zengabor/zenscroll)
   - Anchor scroll animation
 - [VanillaModal](https://www.npmjs.com/package/vanilla-modal)

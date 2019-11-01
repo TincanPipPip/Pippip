@@ -12,13 +12,15 @@
 const mix = require('laravel-mix'),
   copyWebpackPlugin = require('copy-webpack-plugin'),
   imageminPlugin = require('imagemin-webpack-plugin').default,
-  path = require('path');
+  path = require('path'),
+  mixGlob = require('laravel-mix-glob');
 
 /**
  * Variables
  */
 const hostname = 'pippip.localhost',
-  basePath = './assets';
+  basePath = './assets',
+  glob = new mixGlob({ mix });
 
 /**
  * Config
@@ -49,9 +51,8 @@ mix.webpackConfig({
 /**
  * Assets
  */
-mix.sass(`${basePath}/sass/global.scss`, 'css');
-mix.js(`${basePath}/js/global.js`, 'js');
-mix.js(`${basePath}/js/modernizr.js`, 'js');
+glob.sass(`${basePath}/sass/*.scss`, 'css');
+glob.js(`${basePath}/js/*.js`, 'js');
 mix.copyDirectory(`${basePath}/font`, 'dist/font');
 
 /**
