@@ -79,6 +79,11 @@ mix.options({
 });
 ```
 
+### Laravel Mix Glob
+
+Laravel Mix Glob is an extension for Laravel Mix and allows you to use glob patterns for css/js files.
+https://github.com/MohamedLamineAllal/laravel-mix-glob
+
 ## CSS
 
 Pippip v3 is [SASS](https://sass-lang.com) based. Folder structure loosely follows the [Patterlab methodology](https://patternlab.io/)
