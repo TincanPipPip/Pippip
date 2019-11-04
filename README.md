@@ -49,6 +49,10 @@ Pippip v3 runs [Laravel Mix](https://laravel.com/docs/5.7/mix). Run `npm start` 
 Laravel Mix Glob is an extension for Laravel Mix and allows you to use glob patterns for css/js files.
 https://github.com/MohamedLamineAllal/laravel-mix-glob
 
+## Icons
+
+Icons can be imported directly into **.twig** files using `{{ get_icon('icon') }}`.
+
 ## CSS
 
 Pippip v3 is [SASS](https://sass-lang.com) based.
