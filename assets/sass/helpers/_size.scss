@@ -7,7 +7,8 @@
 
 /**
  * Size
- * Easily convert fixed size values to relative ones
+ * Easily convert fixed size values to relative ones.
+ * Enables units to scale with root font size.
  * @param {string} $size
  * @param {number} $base-font-size [100%]
  * @param {string} $unit [rem]

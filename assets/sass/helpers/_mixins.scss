@@ -37,3 +37,20 @@
     #{$property}: #{$value};
   }
 }
+
+/**
+ * Clearfix
+ * Used to clear float layouts.
+ * @return {string}
+ */
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: '';
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
