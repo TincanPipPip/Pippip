@@ -22,7 +22,7 @@ html {
 body {
   @include font-smoothing(true);
   font-family: $font-body;
-  line-height: 1.5;
+  line-height: $line-body;
   display: flex;
   flex-direction: column;
   @include ms-respond(font-size, 0);
