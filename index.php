@@ -25,6 +25,14 @@
       <li>lorem ipsum dolor sit</li>
     </ul>
 
+    <blockquote>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla architecto quam error suscipit! Accusamus cupiditate dolores reiciendis, numquam placeat nam laudantium! Odit sit sapiente blanditiis voluptates voluptate cum beatae quibusdam!</p>
+
+      <footer>
+        <cite>Bruce Willis</cite>
+      </footer>
+    </blockquote>
+
     <h2>Webpack test file</h2>
 
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quisquam eveniet dolores unde blanditiis voluptates quaerat, nam repellendus sequi, eaque ipsum excepturi dolore ea aliquid, nobis perferendis omnis officia minima!</p>
