@@ -8,10 +8,11 @@
 /**
  * Dependencies
  */
-@import 'baguettebox.js/src/baguetteBox';
-@import 'include-media/dist/_include-media';
-@import 'normalize.scss/normalize.scss';
-@import 'reflex-grid/scss/reflex.scss';
+@import '~modularscale-sass/stylesheets/modularscale';
+@import '~baguettebox.js/src/baguetteBox';
+@import '~include-media/dist/_include-media';
+@import '~normalize.scss/normalize.scss';
+@import '~reflex-grid/scss/reflex.scss';
 //@import 'choices.js/assets/styles/scss/choices';
 
 /**
