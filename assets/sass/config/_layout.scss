@@ -8,20 +8,17 @@
 /**
  * Page
  */
-$container-width: 102.222rem;
+$container-width: 100rem;
 
 /**
  * Breakpoints
  */
 $breakpoints: (
-  'initial': 0em,
-  'mobile-low': 23em,
-  'mobile': 30em,
-  'tablet': 43.125em,
-  'desktop': 56.875em,
-  'wide': 79.6875em,
-  'wider': 93.75em,
-  'page': 115em,
+  xs: 576px,
+  sm: 768px,
+  md: 992px,
+  lg: 1200px,
+  xlg: 1600px,
 );
 
 /**
