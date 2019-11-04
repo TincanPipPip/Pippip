@@ -39,9 +39,10 @@
  * @see html.html.twig
  */
 #}
-<header id="js-header" class="o-header">
-
-  <a href="/" title="{{ drupal_config('system.site', 'name') }}" rel="home" class="o-header__logo">{% include '@pippip/partials/svg/logo.html.twig' %}</a>
+<header id="js-header" class="o-header" role="banner">
+  <a href="/" title="{{ drupal_config('system.site', 'name') }}" rel="home" class="o-header__logo">
+    {{ get_icon('logo') }}
+  </a>
 
   {{ page.nav }}
 
@@ -52,28 +53,25 @@
     <span class="a-nav-toggle__line a-nav-toggle__line-2"></span>
     <span class="a-nav-toggle__line a-nav-toggle__line-3"></span>
   </button>
-
 </header>
 
-<div id="js-wrapper" class="wrapper">
 
-  {% include '@pippip/partials/molecules/admin-tabs.html.twig' %}
+{% include '@pippip/partials/molecules/admin-tabs.html.twig' %}
 
-  <div class="visually-hidden">
-    <a id="main-content" tabindex="-1"></a>
-  </div>
+<div class="visually-hidden">
+  <a id="main-content" tabindex="-1"></a>
+</div>
 
+<main role="main" class="wrapper wapper--main">
   {% block content %}
     {{ page.content }}
   {% endblock %}
+</main>
 
-  <footer class="o-footer">
-    {{ page.footer }}
-
-    {{ drupal_menu('footer') }}
-  </footer>
-
-</div>
+<footer class="o-footer" role="contentinfo">
+  {{ page.footer }}
+  {{ drupal_menu('footer') }}
+</footer>
 
 {# 
 	Emergency Message
