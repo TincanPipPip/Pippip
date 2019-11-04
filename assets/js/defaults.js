@@ -3,11 +3,21 @@ import baguetteBox from 'baguettebox.js';
 import zenscroll from 'zenscroll';
 import LazyLoad from 'vanilla-lazyload';
 import Accordions from 'van11y-accessible-accordion-aria';
+import 'objectFitPolyfill';
+import FocusWithin from 'focus-within';
+import UpdateViewportHeight from './components/UpdateViewportHeight';
 
 // Global function to toggle states
 window.toggleState = function(el, dataname, on, off) {
   el.setAttribute(`data-${dataname}`, el.getAttribute(`data-${dataname}`) === on ? off : on);
 };
+
+new UpdateViewportHeight();
+
+FocusWithin(document, {
+  attr: false,
+  className: 'focus-within',
+});
 
 /*
   Image galleries

@@ -10,11 +10,11 @@
  * Easily convert fixed size values to relative ones.
  * Enables units to scale with root font size.
  * @param {string} $size
- * @param {number} $base-font-size [100%]
  * @param {string} $unit [rem]
+ * @param {number} $base-font-size [100%]
  * @return {number}
  */
-@function size($size, $base-font-size: $font-base-size, $unit: 'rem') {
+@function size($size, $unit: 'rem', $base-font-size: $font-base-size) {
   $input-size: $size / ($size * 0 + 1);
   $base-size-value: $base-font-size / ($base-font-size * 0 + 1);
   $base-size: ($base-size-value / 100) * 16;
