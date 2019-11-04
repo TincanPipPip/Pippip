@@ -1,9 +1,12 @@
+import 'objectFitPolyfill';
+import 'focus-visible';
+import 'picturefill';
+
 import baguetteBox from 'baguettebox.js';
 //import Choices from 'choices.js';
 import zenscroll from 'zenscroll';
 import LazyLoad from 'vanilla-lazyload';
 import Accordions from 'van11y-accessible-accordion-aria';
-import 'objectFitPolyfill';
 import FocusWithin from 'focus-within';
 import UpdateViewportHeight from './components/UpdateViewportHeight';
 
@@ -14,6 +17,9 @@ window.toggleState = function(el, dataname, on, off) {
 
 new UpdateViewportHeight();
 
+/**
+ * Focus within polyfill
+ */
 FocusWithin(document, {
   attr: false,
   className: 'focus-within',
