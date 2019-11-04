@@ -5,112 +5,188 @@
  * ----------------------
  */
 
-/*
+/**
  * Config
  */
-
 @mixin font-body {
-  font-family: arial, sans-serif;
-  font-size: 16px;
+  font-family: $font-body;
 }
 
 @mixin font-bold {
-  font-weight: normal;
+  font-weight: $weight-bold;
 }
 
 @mixin font-title {
-  font-weight: 400;
-}
-
-@mixin font-h1 {
-}
-
-@mixin font-h2 {
-}
-
-@mixin font-h3 {
-}
-
-@mixin font-h4 {
+  font-weight: $weight-regular;
 }
 
 /**
- * Styles
+ * Heading
  */
-
-body,
-html {
-  @include font-body;
-  color: $text;
-}
-
-h1,
-.h1,
-h2,
-.h2,
-h3,
-.h3,
-h4,
-.h4,
-h5,
-.h5,
-h6,
-.h6 {
-  @include font-title;
-  margin: 0 0 $bump/2;
-}
-
 h1,
 .h1 {
-  @include font-h1;
+  @include ms-respond(font-size, 4);
 }
 
 h2,
 .h2 {
-  @include font-h2;
+  @include ms-respond(font-size, 3);
 }
 
 h3,
 .h3 {
-  @include font-h3;
+  @include ms-respond(font-size, 2);
 }
 
 h4,
 .h4 {
-  @include font-h4;
+  @include ms-respond(font-size, 1);
 }
 
-p {
-  margin-top: 0;
+h5,
+.h5 {
+  @include ms-respond(font-size, 0);
+}
 
-  &:last-child {
-    margin: 0;
+h6,
+.h6 {
+  @include ms-respond(font-size, 0);
+}
+
+/**
+ * Paragraphs
+ */
+p {
+  margin: 1.5em 0;
+  @include ms-respond(font-size, 0);
+
+  &:first-child {
+    margin-top: 0;
   }
 }
 
-strong {
-  @include font-bold;
+/**
+ * Lists
+ */
+ul,
+ol {
+  margin: 1.5rem 0;
+  list-style-position: inside;
+  padding-left: 0;
+  @include ms-respond(font-size, 0);
 }
 
-em {
-  font-style: italic;
-}
-
-small {
-  font-size: 90%;
-}
-
+/**
+ * Links
+ */
 a {
+  color: inherit;
+  font-weight: inherit;
   text-decoration: none;
-  transition: all 0.2s $easing;
+  @include ms-respond(font-size, 0);
 
-  &:hover {
-    color: $text;
+  &:hover,
+  &:focus,
+  &:active {
     text-decoration: underline;
+  }
+
+  &:focus {
+    outline: 3px dashed currentColor;
+
+    @include focus-visible() {
+      outline: 0;
+    }
   }
 
   &.no-click {
     pointer-events: none;
     cursor: default;
   }
+}
+
+::selection {
+  background-color: $color-secondary;
+  color: $color-primary;
+}
+
+/**
+ * Buttons
+ */
+button {
+  &:focus {
+    outline: 3px dashed currentColor;
+
+    @include focus-visible() {
+      outline: 0;
+    }
+  }
+}
+
+/**
+ * Inline
+ */
+strong {
+  font-weight: $weight-bold;
+}
+
+em {
+  font-style: italic;
+}
+
+span {
+  font-family: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  font-size: inherit;
+}
+
+address {
+  font-family: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  font-size: inherit;
+  font-style: normal;
+}
+
+small {
+  font-size: 90%;
+}
+
+/**
+ * Quote
+ */
+blockquote {
+  margin: 1.5em 0;
+  @include ms-respond(font-size, 1);
+
+  p {
+    margin: 0;
+    font-style: italic;
+
+    &::before {
+      content: '\201C';
+    }
+
+    &::after {
+      content: '\201D';
+    }
+  }
+
+  footer {
+    margin-top: 1.5em;
+  }
+
+  cite {
+    font-style: normal;
+    font-weight: $weight-bold;
+  }
+}
+
+hr {
+  border: solid $color-primary;
+  border-width: 0 0 3px 0;
+  margin: 1.5rem 0;
 }

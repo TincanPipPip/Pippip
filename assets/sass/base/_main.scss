@@ -21,6 +21,7 @@ html {
 
 body {
   @include font-smoothing(true);
+  font-family: $font-body;
   display: flex;
   flex-direction: column;
 }
