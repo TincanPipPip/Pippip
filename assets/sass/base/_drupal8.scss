@@ -36,7 +36,7 @@
   max-width: 100%;
   z-index: 31;
 
-  [class*="col-"] {
+  [class*='col-'] {
     padding: 0 $bump/2;
   }
 
@@ -73,7 +73,7 @@ a.skip-main {
 }
 a.skip-main:focus,
 a.skip-main:active {
-  @include font-bold;
+  font-weight: $weight-bold;
   color: #fff;
   background-color: $text;
   left: auto;

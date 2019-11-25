@@ -51,6 +51,19 @@
     
     <h6>Webpack test file</h6>
 
+    <div class="grid">
+      <div class="grid__cell">1</div>
+      <div class="grid__cell">2</div>
+      <div class="grid__cell">3</div>
+      <div class="grid__cell">4</div>
+      <div class="grid__cell">5</div>
+      <div class="grid__cell">6</div>
+      <div class="grid__cell">7</div>
+      <div class="grid__cell">8</div>
+      <div class="grid__cell">9</div>
+      <div class="grid__cell">10</div>
+    </div>
+
     <script src="/dist/js/defaults.js"></script>
   </body>
 </html>

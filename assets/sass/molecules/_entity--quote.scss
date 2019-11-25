@@ -24,7 +24,7 @@
 
 &__quote {
   blockquote {
-    @include font-title;
+    font-family: $font-display;
     margin: 0;
     padding: 0 0 $bump/2;
 
@@ -43,11 +43,11 @@
     }
 
     cite {
-      @include font-body;
+      font-family: $font-body;
       font-style: normal;
 
       .name {
-        @include font-bold;
+        font-weight: $weight-bold;
       }
     }
   }

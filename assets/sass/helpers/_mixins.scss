@@ -54,3 +54,41 @@
     clear: both;
   }
 }
+
+/**
+ * Unitless
+ * Stripes the unit from a number.
+ * @param {number} $number
+ * @return {number}
+ */
+@function unitless($number) {
+  @return $number / ($number * 0 + 1);
+}
+
+/**
+ * Is Relative Unit
+ * https://css-tricks.com/snippets/sass/advanced-type-checking/
+ * Checks for a relative value.
+ * @param {number} $value
+ * @return {boolean}
+ */
+@function is-relative-unit($value) {
+  @return is-number($value) and index('em' 'ex' 'ch' 'rem' 'vw' 'vh' 'vmin' 'vmax', unit($value)) != null;
+}
+
+/**
+ * Has Relative Units
+ * https://css-tricks.com/snippets/sass/advanced-type-checking/
+ * Checks a map of values for relative units.
+ * @param {map} $values
+ * @return {boolean}
+ */
+@function has-relative-units($values: ()) {
+  @each $value in $values {
+    @if (is-relative-unit($value)) {
+      @return true;
+    }
+  }
+
+  @return false;
+}

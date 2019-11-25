@@ -8,29 +8,23 @@
 /**
  * Font family
  */
-$font-body: 'Helvetica';
-
-/**
- * Font Scale
- * Set a ratio from mobile up to container width.
- * All units must be of the same type.
- * https://www.modularscale.com/
- */
-$modularscale: (
-  base: 1em,
-  ratio: 1.618,
-  20em: (
-    ratio: 1.25,
-  ),
-  115.5em: (
-    ratio: 1.618,
-  ),
-);
+$font-display: 'Montserrat';
+$font-body: 'Montserrat';
 
 /**
  * Font Size
  */
 $font-base-size: 100%; //Set document root size to base font size
+
+/**
+ * Font Scale
+ * Set a min and max breakpoint at which you would 
+ * like the font to scale to.
+ * https://www.madebymike.com.au/writing/precise-control-responsive-typography/
+ */
+$respond-base-size: $font-base-size;
+$respond-min: 20rem;
+$respond-max: 100rem; //Container width
 
 /**
  * Font weight

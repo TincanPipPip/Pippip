@@ -6,31 +6,30 @@
  */
 
 /**
+ * Helpers
+ */
+@import 'helpers/mixins';
+@import 'helpers/animations';
+@import 'helpers/focus-visible';
+@import 'helpers/font-smoothing';
+@import 'helpers/font-scale';
+@import 'helpers/table';
+
+/**
+ * Config
+ */
+@import 'config/typography';
+@import 'config/layout';
+@import 'config/vars';
+
+/**
  * Dependencies
  */
-@import '~modularscale-sass/stylesheets/modularscale';
 @import '~baguettebox.js/src/baguetteBox';
 @import '~include-media/dist/_include-media';
 @import '~normalize.scss/normalize.scss';
 @import '~reflex-grid/scss/reflex.scss';
 //@import 'choices.js/assets/styles/scss/choices';
-
-/**
- * Config
- */
-@import 'config/layout';
-@import 'config/typography';
-@import 'config/vars';
-
-/**
- * Helpers
- */
-@import 'helpers/animations';
-@import 'helpers/focus-visible';
-@import 'helpers/font-smoothing';
-@import 'helpers/mixins';
-@import 'helpers/size';
-@import 'helpers/table';
 
 /**
  * Base
@@ -67,6 +66,8 @@
 @import 'organisms/footer';
 @import 'organisms/views';
 @import 'organisms/search-results';
+
+@import 'layout/grid';
 
 /**
  * Templates

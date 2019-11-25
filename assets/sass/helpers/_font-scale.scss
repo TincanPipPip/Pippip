@@ -1,0 +1,110 @@
+/*
+ * ----------------------
+ * Un.titled
+ * Helpers - Font Scale
+ * ----------------------
+ */
+
+/**
+ * Size
+ * Easily convert fixed size values to relative ones.
+ * Enables units to scale with root font size.
+ * @param {number} $size
+ * @param {string} $unit [rem]
+ * @param {number} $font-base-size [100%]
+ * @return {number}
+ */
+@function size($size, $unit: 'rem', $font-base-size: $font-base-size) {
+  $input-size: unitless($size);
+  $base-size-value: unitless($font-base-size);
+  $base-size: ($base-size-value / 100) * 16;
+
+  @return #{$input-size / $base-size}#{$unit};
+}
+
+/**
+ * Respond
+ * https://www.madebymike.com.au/writing/precise-control-responsive-typography/
+ * Provides a fluid typographic scale for typography.
+ * But can also be used for any CSS rule that takes a number as an argument.
+ * e.g. margin, padding.
+ *
+ * @param {number} $min-size
+ * @param {number} $max-size
+ * @param {number} $min-breakpoint [$respond-min]
+ * @param {number} $max-breakpoint [$respond-max]
+ * @param {number} $font-base-size [$respond-base-size]
+ * @return {number}
+ */
+@function respond($min-size, $max-size, $min-breakpoint: $respond-min, $max-breakpoint: $respond-max, $font-base-size: $respond-base-size) {
+  $base-value: (unitless($font-base-size) / 100) * 16;
+  $min-size-value: unitless($min-size);
+  $max-size-value: unitless($max-size);
+  $min-breakpoint-value: unitless($min-breakpoint);
+  $max-breakpoint-value: unitless($max-breakpoint);
+  $has-relative-units: has-relative-units(($min-breakpoint, $max-breakpoint));
+  $unit: if($has-relative-units, 'rem', 'px');
+
+  @if ($has-relative-units) {
+    $min-size-value: unitless($min-size) / $base-value;
+    $max-size-value: unitless($max-size) / $base-value;
+  }
+
+  @return calc(
+    #{$min-size-value}#{$unit} + (#{$max-size-value} - #{$min-size-value}) * ((100vw - #{$min-breakpoint-value}#{$unit}) /
+          (#{$max-breakpoint-value} - #{$min-breakpoint-value}))
+  );
+}
+
+/**
+ * Respond
+ * https://www.madebymike.com.au/writing/precise-control-responsive-typography/
+ * Provides a fluid typographic scale for typography.
+ * But can also be used for any CSS rule that takes a number as an argument.
+ * e.g. margin, padding.
+ *
+ * @param {number} $min-size
+ * @param {number} $max-size
+ * @param {string} $property
+ * @param {number} $min-range [$respond-min]
+ * @param {number} $max-range [$respond-max]
+ * @param {number} $font-base-size [$respond-base-size]
+ */
+@mixin respond($min-size, $max-size, $property, $min-breakpoint: $respond-min, $max-breakpoint: $respond-max, $font-base-size: $respond-base-size) {
+  $base-value: (unitless($font-base-size) / 100) * 16; //Base font size value e.g. 16, 18
+  $min-size-value: unitless($min-size);
+  $max-size-value: unitless($max-size);
+
+  $min-range-value: unitless($min-breakpoint); // Min range for scale
+  $max-range-value: unitless($max-breakpoint); // Max range for scale
+  $min-breakpoint-value: $min-breakpoint; // Min breakpoint to start scale
+  $max-breakpoint-value: $max-breakpoint; // Max breakpoint to start scale
+
+  $has-relative-units: has-relative-units(($min-breakpoint, $max-breakpoint));
+  $unit: if($has-relative-units, 'rem', 'px');
+
+  // If breakpoints are relative convert sizes to rems
+  // and convert breakpoints to ems.
+  @if ($has-relative-units) {
+    $min-size-value: unitless($min-size) / $base-value;
+    $max-size-value: unitless($max-size) / $base-value;
+    $min-breakpoint-value: #{$min-range-value * $base-value / 16}em;
+    $max-breakpoint-value: #{$max-range-value * $base-value / 16}em;
+  }
+
+  // Initial size
+  #{$property}: #{$min-size-value}#{$unit};
+
+  // Breakpoint range to scale size
+  @include media('>=#{$min-breakpoint-value}', '<#{$max-breakpoint-value}') {
+    #{$property}: calc(
+      #{$min-size-value}#{$unit} + (#{$max-size-value} - #{$min-size-value}) * ((100vw - #{$min-range-value}#{$unit}) /
+            (#{$max-range-value} - #{$min-range-value}))
+    );
+  }
+
+  // Max size
+  @include media('>=#{$max-breakpoint-value}') {
+    #{$property}: #{$max-size-value}#{$unit};
+  }
+}

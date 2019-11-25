@@ -12,7 +12,7 @@ input[type='email'],
 input[type='submit'],
 textarea,
 select {
-  @include font-body;
+  font-family: $font-body;
   color: $text;
   resize: none;
   padding: $bump/2 $bump;
