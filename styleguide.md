@@ -215,19 +215,45 @@ Typography ratios are based on [Modular Scale](https://www.modularscale.com/), t
 #### Setup
 
 To start using fluid typograpgy the following config and styles need to be added.
-```
-$font-base-size: 100%;
-$respond-base-size: $font-base-size;
-$respond-min: 20rem; //Minimum screen width to start scaling typography (in rems)
-$respond-max: 100rem; //Minimum screen width to stop scaling typography (in rems)
+```scss
+$respond-base-size: 100%;
+$respond-min: 20rem; 
+$respond-max: 100rem;
 ```
 
-```
+```scss
 html {
-  font-size: $font-base-size;
+  font-size: $respond-base-size;
 }
 
 body {
   @include respond(16px, 18px, font-size);
+}
+```
+
+#### Variables
+`$respond-base-size` - Root font size (percentage) used convert font size into relative rem units.
+`$respond-min` - Minimum screen width to start scaling typography (in rems / px)
+`$respond-max` - Minimum screen width to stop scaling typography (in rems / px)
+
+Please note - Pixels or rems can be used for the min / max typograpy range however they must be of both the same type. The output will also reflect the chosen unit.
+
+#### Usage
+The respond mixin and function can be used to output a fluid value for any css property that can accept a numeric value.
+
+```scss
+h1 {
+   @include respond(39.063px, 109.656px, font-size);
+   @include respond(49.063px, 119.656px, line-height);
+}
+```
+
+#### Non-scaling font-sizes
+
+There are many instances when you may not want a fluid value for a particular CSS property. In these circumstances the `size` function can be used to output either relative/fixed value based on the root font size.
+
+```scss
+.teaser {
+   padding: size(20px); //Outputs a rem value based on $respond-base-size.
 }
 ```
