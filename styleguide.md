@@ -14,6 +14,7 @@
    - [Mixins](#mixins)
    - [Nested selectors](#nested-selectors)
    - [Media queries](#media-queries)
+   - [Typography](#typography)
 
 ## Markup
 
@@ -206,3 +207,27 @@ If you must use an ID selector in the first place (and you should really try not
 ### Media queries
 
 Using the included `@import media()` mixin (See `./assets/sass/helpers/_mediaq.scss` for default breakpoints), media queries should be placed inline with their parent styling, rather than at the end of the document.
+
+### Typography
+
+Typography ratios are based on [Modular Scale](https://www.modularscale.com/), typically these will be chosen by the designer and added into the style guide. Pippip uses a fluid typography scale based on [Mike Riethmuller's - precise control responsive typography](https://www.madebymike.com.au/writing/precise-control-responsive-typography/).
+
+#### Setup
+
+To start using fluid typograpgy the following config and styles need to be added.
+```
+$font-base-size: 100%;
+$respond-base-size: $font-base-size;
+$respond-min: 20rem; //Minimum screen width to start scaling typography (in rems)
+$respond-max: 100rem; //Minimum screen width to stop scaling typography (in rems)
+```
+
+```
+html {
+  font-size: $font-base-size;
+}
+
+body {
+  @include respond(16px, 18px, font-size);
+}
+```
