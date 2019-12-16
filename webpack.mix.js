@@ -43,6 +43,7 @@ if (mix.inProduction()) {
   mix.disableNotifications();
 } else {
   mix.sourceMaps();
+  mix.webpackConfig({ devtool: 'inline-source-map' });
 }
 
 mix.webpackConfig({
