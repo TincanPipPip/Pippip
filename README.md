@@ -1,5 +1,7 @@
 # Pippip v3
 
+** Deprectiated in favour of https://github.com/TincanPipPip/Syd-Upstream **
+
 Contents:
 
 - [About](#About)
